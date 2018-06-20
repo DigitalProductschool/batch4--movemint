@@ -31,7 +31,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <View style={styles.inputContainer}>
           <TextInput
-            placeholder="An awesome place"
+            placeholder="test"
             value={this.state.placeName}
             onChangeText={this.placeNameChangedHandler}
             style={styles.placeInput}
