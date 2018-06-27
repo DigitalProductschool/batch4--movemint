@@ -13,7 +13,7 @@ class GeolocationExample extends Component {
     }
 
     componentDidMount() {
-        navigator.geolocation.getCurrentPosition(
+        navigator.geolocation.watchPosition(
             (position) => {
                 this.setState({
                     latitude: position.coords.latitude,
@@ -22,7 +22,7 @@ class GeolocationExample extends Component {
                 });
             },
             (error) => this.setState({ error: error.message }),
-            { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+            { enableHighAccuracy: false, timeout: 20000, maximumAge: 1000, distanceFilter: 1 },
         );
     }
 
