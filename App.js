@@ -8,19 +8,27 @@ class GeolocationExample extends Component {
         this.state = {
             latitude: null,
             longitude: null,
-            error: null,
+            error: null
         };
     }
 
     startTracking = () => {
-         this.watchId = navigator.geolocation.watchPosition(
+        let longitudes = [];
+        let latitudes = [];
+
+        this.watchId = navigator.geolocation.watchPosition(
             (position) => {
                 this.setState({
                     latitude: position.coords.latitude,
+
                     longitude: position.coords.longitude,
+
                     error: null,
                 });
+                console.log("Latitude: " + position.coords.latitude),
+                    console.log("Longitude: " + position.coords.longitude)
             },
+
             (error) => this.setState({error: error.message}),
             {enableHighAccuracy: false, timeout: 20000, maximumAge: 1000, distanceFilter: 1},
         );
