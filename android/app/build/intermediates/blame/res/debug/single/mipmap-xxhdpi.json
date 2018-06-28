@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/parth/Codes/movemint/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/home/parth/Codes/movemint/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
         "source": "/Users/robinbux/Desktop/movemint/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }
