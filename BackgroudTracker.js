@@ -56,7 +56,7 @@ class BgTracking extends Component {
       });
 
       BackgroundGeolocation.on('start', () => {
-        console.log('[INFO] BackgroundGeolocation service has been started');
+        console.log('[INFO] BackgroundGeolocation service has been stasrted');
       });
 
       BackgroundGeolocation.on('stop', () => {
@@ -77,6 +77,7 @@ class BgTracking extends Component {
 
       BackgroundGeolocation.on('background', () => {
         console.log('[INFO] App is in background');
+        console.log(location)
       });
 
       BackgroundGeolocation.on('foreground', () => {
@@ -92,6 +93,7 @@ class BgTracking extends Component {
 
       // you can also just start without checking for status
     BackgroundGeolocation.start();
+    //BackgroundGeolocation.background();
 
   }
 
