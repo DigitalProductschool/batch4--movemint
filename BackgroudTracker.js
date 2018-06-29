@@ -3,6 +3,17 @@ import { Alert, View, Button, Text, StyleSheet } from 'react-native';
 import BackgroundGeolocation from 'react-native-mauron85-background-geolocation';
 
 class BgTracking extends Component {
+
+  constructor(){
+      super();
+      this.state = {
+          rideTimerSeconds:"00",
+          rideTimerMinutes: "00",
+          rideTimerHours: "00",
+          headerMessage: "No GPS signal"
+      }
+  }
+
   startTrack = () => {
     //Alert.alert("Tracking Started!");
       BackgroundGeolocation.configure({
@@ -106,11 +117,19 @@ class BgTracking extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.buttonContainer}>
+      <View>
+        <View>
+          <Text style={styles.rideTimerStyle}>{this.state.rideTimerHours + " : " + this.state.rideTimerMinutes +
+                  " : " + this.state.rideTimerSeconds} </Text>
+        </View>
+        <View style={{backgroundColor: "blue", height: 40, justifyContent: 'center',
+alignItems: 'center' }}>
+          <Text style={styles.headerTextStyle}>{this.state.headerMessage} </Text>
+        </View>
+        <View>
           <Button title="Start tracking" onPress={this.startTrack}/>
         </View>
-        <View style={styles.buttonContainer}>
+        <View>
           <Button color='red' title="Stop tracking" onPress={this.stopTrack}/>
         </View>
       </View>
@@ -118,14 +137,21 @@ class BgTracking extends Component {
   }
 }
 const styles = StyleSheet.create({
+  rideTimerStyle: {
+    textAlign: "center",
+    fontSize: 22,
+    margin: 5
+  },
+  headerTextStyle: {
+    textAlign: "center",
+    fontSize: 12,
+    margin: 5,
+    color: "white"
+  },
   container: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-  buttonContainer: {
-    flex: 1,
+    alignItems: 'center'
   }
 });
 export default BgTracking;
