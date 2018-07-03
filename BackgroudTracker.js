@@ -5,10 +5,17 @@ import {
   Button,
   Text,
   StyleSheet,
-  TouchableHighlight
+  TouchableHighlight,
+  NativeModules,
+  LayoutAnimation
 } from "react-native";
 import BackgroundGeolocation from "react-native-mauron85-background-geolocation";
 import ToggleSwitch from "toggle-switch-react-native";
+
+const { UIManager } = NativeModules;
+
+UIManager.setLayoutAnimationEnabledExperimental &&
+  UIManager.setLayoutAnimationEnabledExperimental(true);
 
 class BgTracking extends Component {
   constructor() {
@@ -19,10 +26,25 @@ class BgTracking extends Component {
       rideTimerHours: "00",
       headerMessage: "No GPS signal",
       isOnBlueToggleSwitch: false,
+
+      buttonStatus: "recordingButton",
+
       startButtonColor: "#E0ECF1",
-      stopButtonColor: "red"
+      startButtonWidth: 310,
+      startButtonHeight: 310,
+      startButtonBorderRadius: 310 / 2,
+      startButtonBorderColor: "#79CDBE",
+      startButtonBorderWidth: 80,
+
+      stopButtonColor: "red",
+      stopButtonWidth: 155,
+      stopButtonHeight: 155,
+      stopButtonBorderRadius: 30,
+      stopButtonBorderColor: "#79CDBE",
+      stopButtonBorderWidth: 33
     };
   }
+
   onToggle(isOn) {
     alert("Changed to " + isOn);
   }
@@ -153,11 +175,26 @@ class BgTracking extends Component {
 
   startTrackingFunction() {
     this.startTrack();
+    // Animate the update
+    LayoutAnimation.spring();
+    this.setState({
+      buttonStatus: "stopButton",
+      startButtonBorderRadius: this.state.stopButtonBorderRadius,
+      startButtonHeight: this.state.stopButtonHeight,
+      startButtonWidth: this.state.stopButtonWidth,
+      startButtonBorderWidth: this.state.stopButtonBorderWidth
+      /*w: this.state.w + 15,
+      h: this.state.h + 15*/
+    });
   }
 
   stopTrackingFunciton() {
     this.stopTrack();
-    this.setState({ startButtonColor: "green" });
+    LayoutAnimation.spring();
+    this.setState({
+      buttonStatus: "recordingButton",
+      startButtonColor: "green"
+    });
   }
 
   render() {
@@ -166,25 +203,27 @@ class BgTracking extends Component {
         <View>
           <Text style={styles.rideTimerStyle}>
             {this.state.rideTimerHours +
-              " : " +
+              ":" +
               this.state.rideTimerMinutes +
-              " : " +
+              ":" +
               this.state.rideTimerSeconds}{" "}
           </Text>
         </View>
-        <View>
+        <View /*style={{ backgroundColor: "red" }}*/>
           <TouchableHighlight
             style={{
               backgroundColor: this.state.startButtonColor,
-              borderRadius: 155,
-              height: 310,
-              width: 310,
-              borderWidth: 80,
-              borderColor: "#79CDBE"
+              borderRadius: this.state.startButtonBorderRadius,
+              height: this.state.startButtonHeight,
+              width: this.state.startButtonWidth,
+              borderWidth: this.state.startButtonBorderWidth,
+              borderColor: this.state.startButtonBorderColor,
+              justifyContent: "center",
+              alignItems: "center"
             }}
             onPress={this.startTrackingFunction.bind(this)}
           >
-            <Text style={styles.startRecText}>START</Text>
+            <Text style={styles.startRecText}>REC</Text>
           </TouchableHighlight>
         </View>
         <View>
@@ -195,20 +234,21 @@ class BgTracking extends Component {
       </View>
     );
   }
-
-  stopButtonStyle = {};
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "#464b64"
   },
   rideTimerStyle: {
     textAlign: "center",
     fontSize: 76,
-    margin: 5
+    fontFamily: "Roboto",
+    color: "#A2ABB8",
+    margin: 40
   },
   headerTextStyle: {
     textAlign: "center",
@@ -217,9 +257,11 @@ const styles = StyleSheet.create({
     color: "white"
   },
   startRecText: {
+    alignSelf: "center",
     textAlign: "center",
-      color: "#79CDBE",
-      fontSize: 43
+    color: "#79CDBE",
+    fontSize: 43,
+    justifyContent: "center"
   },
   startButtonStyle: {},
   stopButtonStyle: {}
