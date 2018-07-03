@@ -36,12 +36,26 @@ class BgTracking extends Component {
       startButtonBorderColor: "#79CDBE",
       startButtonBorderWidth: 80,
 
+      initialStartButtonColor: "#E0ECF1",
+      initialStartButtonWidth: 310,
+      initialStartButtonHeight: 310,
+      initialStartButtonBorderRadius: 310 / 2,
+      initialStartButtonBorderColor: "#79CDBE",
+      initialStartButtonBorderWidth: 80,
+
       stopButtonColor: "red",
       stopButtonWidth: 155,
       stopButtonHeight: 155,
       stopButtonBorderRadius: 30,
       stopButtonBorderColor: "#79CDBE",
-      stopButtonBorderWidth: 33
+      stopButtonBorderWidth: 33,
+
+      initalStopButtonColor: "red",
+      initalStopButtonWidth: 155,
+      initalStopButtonHeight: 155,
+      initalStopButtonBorderRadius: 30,
+      initalStopButtonBorderColor: "#79CDBE",
+      initalStopButtonBorderWidth: 33
     };
   }
 
@@ -170,7 +184,6 @@ class BgTracking extends Component {
     BackgroundGeolocation.events.forEach(event =>
       BackgroundGeolocation.removeAllListeners(event)
     );
-    Alert.alert("Tracking stopped!");
   };
 
   startTrackingFunction() {
@@ -193,7 +206,10 @@ class BgTracking extends Component {
     LayoutAnimation.spring();
     this.setState({
       buttonStatus: "recordingButton",
-      startButtonColor: "green"
+      startButtonBorderRadius: this.state.initialStartButtonBorderRadius,
+      startButtonHeight: this.state.initialStartButtonHeight,
+      startButtonWidth: this.state.initialStartButtonWidth,
+      startButtonBorderWidth: this.state.initialStartButtonBorderWidth
     });
   }
 
@@ -221,14 +237,20 @@ class BgTracking extends Component {
               justifyContent: "center",
               alignItems: "center"
             }}
+            onPress={() => {
+                if (this.state.buttonStatus == "recordingButton"){
+                    this.startTrackingFunction()
+                }
+                else{
+                    this.stopTrackingFunciton()
+                }
+            }}
+
+            /*
             onPress={this.startTrackingFunction.bind(this)}
+            */
           >
             <Text style={styles.startRecText}>REC</Text>
-          </TouchableHighlight>
-        </View>
-        <View>
-          <TouchableHighlight onPress={this.stopTrackingFunciton.bind(this)}>
-            <Text>STOP</Text>
           </TouchableHighlight>
         </View>
       </View>
