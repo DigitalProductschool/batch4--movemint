@@ -22,6 +22,3 @@ allprojects {
         }
     }
 }
-ext {
-  googlePlayServicesVersion = "9.8.0"
-}

@@ -3,12 +3,39 @@
 
     <item
         is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.4/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_42044825dd4864435a672638ec38911ef8e09dea.jar" />
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.0.4_a47a3de7d94ba8e12a38600102c72db6b3b89e95.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_410e1d35a46ce303284eaabbfb8d0734c4ab52ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_6d4e29b7b0b0b9ef8d294f6ef4bc933be08f8bdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.2.0_f9c8858d6d16f4dcdcbe409942045ab979ba3b31.jar" />
     </item>
     <item
         is-multidex="false"
@@ -21,12 +48,93 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-9.8.0_c1910bb5f32f533fc9b25c6f706556c3d3ddb527.jar" />
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.2.0_8d0940e0f79fa1b36a1e65bf05181eef90ef6449.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.2.0_c46bc0b6e1e06deabdfffc977b6cb3a492c1603d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.github.jparkie/promise/1.0.3/e30672423be509d86ff5f0e615de0d46dcd0f61c/promise-1.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e30672423be509d86ff5f0e615de0d46dcd0f61c">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/promise-1.0.3_39d7323cc09dd6f6ee818baec132439a462ec721.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/movemint/realm/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1dec3e6be8d8ed6d930724898f876ec43034a7f1">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/movemint-realm-unspecified_c927c0e54f0e5a44c6e7d2dad2d4beb5a85933b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_7841ca3d7e5bea242f861a5a4d5d487dccbdf52a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/.gradle/caches/modules-2/files-2.1/org.nanohttpd/nanohttpd/2.2.0/73a02117620b6cc7683a1ed6ae24c2f36e2a715/nanohttpd-2.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="073a02117620b6cc7683a1ed6ae24c2f36e2a715">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/nanohttpd-2.2.0_20bcf468851bd8e53db8fb2b9c21e1fb4403a8d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_d1e93896a87488c94bb231a1bd5afbf71918aec0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_d79dca9c989f45e530eb6ff07be5e449a9a23836.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="41f47bbcd281fdb1e42e220220ab3bfa1da591e0">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-11.0.4_89183983ae59e9cec144242acd68999283340142.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.2.0_c796f77a1900815391c1ad7ce848c53db13e3b13.jar" />
     </item>
     <item
         is-multidex="false"
@@ -36,6 +144,24 @@
         revision="23.0.1"
         sha1="8116d7ec715544f318f45d12e3e4fe77916a8284">
         <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/movemint-react-native-mauron85-background-geolocation-unspecified_5ba73bc63bd1ff8d3692870d24ce1d82ec6c2364.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_4b39bae7a8d0b892c09640dcde311002ccb1ad29.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-11.0.4_c916b0814131abcbd2035023a002c8db02f8fb75.jar" />
     </item>
     <item
         is-multidex="false"
@@ -57,21 +183,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/movemint/react-native-mauron85-background-geolocation-common/unspecified/preoreoRelease/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.8.0_b69783ecea8235989540d51695a7f1156ba70ca9.jar" />
+        sha1="ef45b2ca59f5c59d22035fc1cf37169ac0693c99">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/react-native-mauron85-background-geolocation-common-unspecified-preoreoRelease_fe540d986e914714fa04697ec0fd100221ebdd26.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
+        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.8.0_428cbb4f4ec5131611bea5ee2017ff58799c0df0.jar" />
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_ad3c937aed1e446eac8a1e6ee69c7da38b9ef3cf.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,132 +228,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_bd7f193451856e4c624c8a7955135f964b9fd1d3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_d220ab96ea3d0ffa2bca6482a41899678063a99d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_2ed56141390d621b0bcc73ebaa48dbf047a73343.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_a76f2b390a67735c64d7212b4c19f43e5fe46994.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_3ae36a37f7c53f60b20ed9f05d036d7c2b646537.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_410e1d35a46ce303284eaabbfb8d0734c4ab52ba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_52e73c12e61432b79c4ba509b2b73128744ad38e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_6d4e29b7b0b0b9ef8d294f6ef4bc933be08f8bdf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.github.jparkie/promise/1.0.3/e30672423be509d86ff5f0e615de0d46dcd0f61c/promise-1.0.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="e30672423be509d86ff5f0e615de0d46dcd0f61c">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/promise-1.0.3_39d7323cc09dd6f6ee818baec132439a462ec721.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_d1e93896a87488c94bb231a1bd5afbf71918aec0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_d79dca9c989f45e530eb6ff07be5e449a9a23836.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_4b39bae7a8d0b892c09640dcde311002ccb1ad29.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/movemint/react-native-mauron85-background-geolocation-common/unspecified/preoreoRelease/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ef45b2ca59f5c59d22035fc1cf37169ac0693c99">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/react-native-mauron85-background-geolocation-common-unspecified-preoreoRelease_fe540d986e914714fa04697ec0fd100221ebdd26.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_ad3c937aed1e446eac8a1e6ee69c7da38b9ef3cf.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -237,12 +237,39 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.0.4_e75d716413174ddd0be92c798da425e2689feb7e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.2.0_a1315d9d812e22cf2de6a3d59fc01406857e0f90.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.intentfilter/android-permissions/0.1.6/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="d017be0e8d084dbf49feb46382b972f390fcab74">
         <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.intentfilter-android-permissions-0.1.6_eab7364e10cba33960332e69a795b9114af47456.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_bd7f193451856e4c624c8a7955135f964b9fd1d3.jar" />
     </item>
     <item
         is-multidex="false"
@@ -264,6 +291,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_d220ab96ea3d0ffa2bca6482a41899678063a99d.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -273,12 +309,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
+        jar="/home/parth/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.8.0_b188031098b697239ee3d7fb283cadd358ca4766.jar" />
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_a76f2b390a67735c64d7212b4c19f43e5fe46994.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_3ae36a37f7c53f60b20ed9f05d036d7c2b646537.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/home/parth/Codes/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.2.0_e9457d10431885900c71720ccf0a9529042102a4.jar" />
     </item>
     <item
         is-multidex="false"

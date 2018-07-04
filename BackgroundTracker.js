@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Alert, View, Button, Text, StyleSheet } from 'react-native';
 import BackgroundGeolocation from 'react-native-mauron85-background-geolocation';
+import Database from './index.android.js'
 
-class BgTracking extends Component {
+const Realm = require('realm');
+
+class BackgroundTracking extends Component {
   startTrack = () => {
     //Alert.alert("Tracking Started!");
+    
       BackgroundGeolocation.configure({
         desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
         stationaryRadius: 50,
@@ -107,6 +111,7 @@ class BgTracking extends Component {
   render() {
     return (
       <View style={styles.container}>
+      {/* <Database /> */}
         <View style={styles.buttonContainer}>
           <Button title="Start tracking" onPress={this.startTrack}/>
         </View>
@@ -128,4 +133,4 @@ const styles = StyleSheet.create({
     flex: 1,
   }
 });
-export default BgTracking;
+export default BackgroundTracking;

@@ -334,7 +334,7 @@
                     "endOffset": 2005
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -353,7 +353,7 @@
                     "endOffset": 2193
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -372,7 +372,7 @@
                     "endOffset": 2321
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -391,7 +391,7 @@
                     "endOffset": 2433
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -410,7 +410,7 @@
                     "endOffset": 2646
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -429,7 +429,7 @@
                     "endOffset": 2775
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -448,7 +448,7 @@
                     "endOffset": 2906
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -463,17 +463,17 @@
                     "startLine": 26,
                     "startColumn": 4,
                     "startOffset": 2911,
-                    "endColumn": 189,
-                    "endOffset": 3096
+                    "endColumn": 188,
+                    "endOffset": 3095
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
                         "startOffset": 285,
-                        "endColumn": 189,
-                        "endOffset": 474
+                        "endColumn": 188,
+                        "endOffset": 473
                     }
                 }
             },
@@ -481,12 +481,12 @@
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 3101,
+                    "startOffset": 3100,
                     "endColumn": 207,
-                    "endOffset": 3304
+                    "endOffset": 3303
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -500,12 +500,12 @@
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 3309,
+                    "startOffset": 3308,
                     "endColumn": 108,
-                    "endOffset": 3413
+                    "endOffset": 3412
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -519,12 +519,12 @@
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 3418,
+                    "startOffset": 3417,
                     "endColumn": 190,
-                    "endOffset": 3604
+                    "endOffset": 3603
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -538,12 +538,12 @@
                 "to": {
                     "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 3609,
+                    "startOffset": 3608,
                     "endColumn": 128,
-                    "endOffset": 3733
+                    "endOffset": 3732
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 0,
@@ -557,12 +557,12 @@
                 "to": {
                     "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 3738,
+                    "startOffset": 3737,
                     "endColumn": 207,
-                    "endOffset": 3941
+                    "endOffset": 3940
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 0,
@@ -576,12 +576,12 @@
                 "to": {
                     "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 3946,
+                    "startOffset": 3945,
                     "endColumn": 171,
-                    "endOffset": 4113
+                    "endOffset": 4112
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 0,
@@ -595,12 +595,12 @@
                 "to": {
                     "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 4118,
+                    "startOffset": 4117,
                     "endColumn": 97,
-                    "endOffset": 4211
+                    "endOffset": 4210
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 0,
@@ -614,12 +614,12 @@
                 "to": {
                     "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 4216,
+                    "startOffset": 4215,
                     "endColumn": 94,
-                    "endOffset": 4306
+                    "endOffset": 4305
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 0,
@@ -633,12 +633,12 @@
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 4311,
+                    "startOffset": 4310,
                     "endColumn": 108,
-                    "endOffset": 4415
+                    "endOffset": 4414
                 },
                 "from": {
-                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/res/values-sr/values.xml",
+                    "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/values-sr/values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 0,
@@ -652,359 +652,12 @@
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 4420,
+                    "startOffset": 4419,
                     "endColumn": 100,
-                    "endOffset": 4516
+                    "endOffset": 4515
                 },
                 "from": {
                     "file": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 2077,
-                        "endColumn": 100,
-                        "endOffset": 2173
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 108,
-                    "endOffset": 159
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 280,
-                        "endColumn": 108,
-                        "endOffset": 384
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 164,
-                    "endColumn": 107,
-                    "endOffset": 267
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 389,
-                        "endColumn": 107,
-                        "endOffset": 492
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 272,
-                    "endColumn": 122,
-                    "endOffset": 390
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 497,
-                        "endColumn": 122,
-                        "endOffset": 615
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 395,
-                    "endColumn": 102,
-                    "endOffset": 493
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 620,
-                        "endColumn": 102,
-                        "endOffset": 718
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 498,
-                    "endColumn": 105,
-                    "endOffset": 599
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 723,
-                        "endColumn": 105,
-                        "endOffset": 824
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 604,
-                    "endColumn": 85,
-                    "endOffset": 685
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 829,
-                        "endColumn": 85,
-                        "endOffset": 910
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 690,
-                    "endColumn": 103,
-                    "endOffset": 789
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 915,
-                        "endColumn": 103,
-                        "endOffset": 1014
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 794,
-                    "endColumn": 117,
-                    "endOffset": 907
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 1019,
-                        "endColumn": 117,
-                        "endOffset": 1132
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 912,
-                    "endColumn": 87,
-                    "endOffset": 995
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1137,
-                        "endColumn": 87,
-                        "endOffset": 1220
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 1000,
-                    "endColumn": 104,
-                    "endOffset": 1100
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1225,
-                        "endColumn": 104,
-                        "endOffset": 1325
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 1105,
-                    "endColumn": 107,
-                    "endOffset": 1208
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1330,
-                        "endColumn": 107,
-                        "endOffset": 1433
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 1213,
-                    "endColumn": 100,
-                    "endOffset": 1309
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 1438,
-                        "endColumn": 100,
-                        "endOffset": 1534
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 1314,
-                    "endColumn": 103,
-                    "endOffset": 1413
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 1539,
-                        "endColumn": 103,
-                        "endOffset": 1638
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 1418,
-                    "endColumn": 107,
-                    "endOffset": 1521
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1643,
-                        "endColumn": 107,
-                        "endOffset": 1746
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 1526,
-                    "endColumn": 100,
-                    "endOffset": 1622
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1751,
-                        "endColumn": 100,
-                        "endOffset": 1847
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 17,
-                    "startColumn": 4,
-                    "startOffset": 1627,
-                    "endColumn": 127,
-                    "endOffset": 1750
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1852,
-                        "endColumn": 127,
-                        "endOffset": 1975
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 18,
-                    "startColumn": 4,
-                    "startOffset": 1755,
-                    "endColumn": 96,
-                    "endOffset": 1847
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1980,
-                        "endColumn": 96,
-                        "endOffset": 2072
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1852,
-                    "endColumn": 100,
-                    "endOffset": 1948
-                },
-                "from": {
-                    "file": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-sr/values-sr.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,

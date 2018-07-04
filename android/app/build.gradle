@@ -137,6 +137,7 @@ android {
 }
 
 dependencies {
+    compile project(':realm')
     compile project(':react-native-mauron85-background-geolocation')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
@@ -148,4 +149,7 @@ dependencies {
 task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
+}
+ext {
+  googlePlayServicesVersion = "9.8.0"
 }

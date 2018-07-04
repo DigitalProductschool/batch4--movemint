@@ -8,10 +8,6 @@
         "source": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/movemint/react-native-mauron85-background-geolocation/unspecified/res/xml/syncadapter.xml"
     },
     {
-        "merged": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/res/xml/preferences.xml"
-    },
-    {
         "merged": "/home/parth/Codes/movemint/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
         "source": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/res/xml/preferences.xml"
     }

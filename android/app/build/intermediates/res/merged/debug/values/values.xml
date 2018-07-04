@@ -269,7 +269,7 @@
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <integer name="google_play_services_version">9877000</integer>
+    <integer name="google_play_services_version">11020000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -289,7 +289,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="account_type" translatable="false">com.movemint</string>
-    <string name="app_name">Movemint</string>
+    <string name="app_name">movemint</string>
     <string name="catalyst_copy_button" project="catalyst" translatable="false">Copy</string>
     <string name="catalyst_debugjs" project="catalyst" translatable="false">Debug JS Remotely</string>
     <string name="catalyst_debugjs_nuclide" project="catalyst" translatable="false">Debug JS in Nuclide</string>
