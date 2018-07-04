@@ -3,6 +3,7 @@ import {
   Alert,
   View,
   Button,
+  Image,
   Text,
   StyleSheet,
   TouchableHighlight,
@@ -10,6 +11,7 @@ import {
   LayoutAnimation
 } from "react-native";
 import BackgroundGeolocation from "react-native-mauron85-background-geolocation";
+import renderIf from './renderIf'
 import ToggleSwitch from "toggle-switch-react-native";
 
 const { UIManager } = NativeModules;
@@ -225,6 +227,19 @@ class BgTracking extends Component {
               this.state.rideTimerSeconds}{" "}
           </Text>
         </View>
+
+        {renderIf(this.state.buttonStatus == "stopButton")(
+          <View>
+            <Image
+              style={{ width: 300, height: 200 }}
+              source={{
+                uri:
+                  "https://cdn.dribbble.com/users/400493/screenshots/1697984/bikerdribbble.gif"
+              }}
+            />
+          </View>
+        )}
+
         <View /*style={{ backgroundColor: "red" }}*/>
           <TouchableHighlight
             style={{
@@ -238,17 +253,12 @@ class BgTracking extends Component {
               alignItems: "center"
             }}
             onPress={() => {
-                if (this.state.buttonStatus == "recordingButton"){
-                    this.startTrackingFunction()
-                }
-                else{
-                    this.stopTrackingFunciton()
-                }
+              if (this.state.buttonStatus == "recordingButton") {
+                this.startTrackingFunction();
+              } else {
+                this.stopTrackingFunciton();
+              }
             }}
-
-            /*
-            onPress={this.startTrackingFunction.bind(this)}
-            */
           >
             <Text style={styles.startRecText}>REC</Text>
           </TouchableHighlight>

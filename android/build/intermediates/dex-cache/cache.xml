@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/webpsupport/1.9.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="60c3e1602484536371835e5180089ee664de4a2c">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-webpsupport-1.9.0_c588fe2a22cf15389f7964738dc5cbeaf7f3e04d.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
         jumboMode="false"
         optimize="true"
@@ -54,6 +63,15 @@
         revision="23.0.1"
         sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
         <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_0e3bf246d5307f3f5c484a1ac426b39217a110e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.9.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ae15c560bc6685007440d8a70686f8348bafd791">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.9.0_630a19fe8c28a7c6f9cf6126aa59d195f57be83e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -93,12 +111,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_7c06a672af45656dac3a7d487e9fcc5ceca74def.jar" />
+        sha1="9803a14716e9f462afb5742811f3456c39f3be3a">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.3.0_31fa62889d03410843d78ed85aedf10aac47f035.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/animated-base/1.9.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="99531f495b90f08fc80915a1e393ba3d06e6cb8f">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-base-1.9.0_fe97438ff7b1f80c385ffd0f324dad308f6c328f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -126,15 +153,6 @@
         revision="23.0.1"
         sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
         <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_a82a916f45165c6d9e1bcfb7c6ae4a1ec98bb5a4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_cf18f380b37fc0fc0532e2dfd81e4fbc9059cf6c.jar" />
     </item>
     <item
         is-multidex="false"
@@ -174,12 +192,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/animated-drawable/1.9.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_6b573241ab190434c9f21ea13ce0e3a1ffed49f7.jar" />
+        sha1="7320f39e279e5451dec48c53f4619d76787390df">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-drawable-1.9.0_fda39f747337069fac0b28c23b922f4abc9f6268.jar" />
     </item>
     <item
         is-multidex="false"
@@ -228,12 +246,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.9.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_19ee998ad826436caf1713285e3dd7ae55385ee1.jar" />
+        sha1="f80a752d1333efd4fb9b87da63e73909acb151af">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.9.0_4dc8afea5bffb66ddaff66abea82c9beba049936.jar" />
     </item>
     <item
         is-multidex="false"
@@ -255,6 +273,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.9.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="87382214d92be4e3c931cb6aa7aa4e827bc179b7">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.9.0_a9e16135e75e04cefb4d21a3db3989570e1cefa7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.9.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="da59c80e4a1c8df62d2b4188ef3efddab8afa236">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.9.0_cce81cd05f33cb19204374e876695d2b0425d931.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -273,21 +309,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/animated-webp/1.9.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_76b79da50c3eca68d8ab27c3f85c72073c69897c.jar" />
+        sha1="e541033e189e04844271f1de24eb734b91d5e78c">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-webp-1.9.0_05d0360c290c04a6c4707b3c93cd175ab8efa84c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.9.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_1a20fe66e4f07c9f1f58ed85f68e6e989aec9188.jar" />
+        sha1="1c9837ec75b2273699379c2ba0ae63d669b4f08c">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.9.0_2c685ad1d013fafd4910e757b768c7bcb77b4533.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/animated-gif/1.9.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ac7146d3a0a814e58ae6305ffbd708f1e7d4385c">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-gif-1.9.0_52f9cc376033d5b340b3b4f85416635924a0b709.jar" />
     </item>
 
 </items>

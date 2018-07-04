@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/anim/abc_fade_out.xml"
-    },
-    {
         "merged": "/home/parth/Codes/movemint/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
         "source": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/res/anim/catalyst_slide_up.xml"
+    },
+    {
+        "merged": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/anim/abc_fade_out.xml"
     },
     {
         "merged": "/home/parth/Codes/movemint/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",

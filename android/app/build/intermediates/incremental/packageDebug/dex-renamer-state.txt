@@ -1,4 +1,4 @@
-#Fri Jun 29 14:04:00 CEST 2018
+#Tue Jul 03 20:58:04 CEST 2018
 base.0=/Users/robinbux/Desktop/movemint/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/robinbux/Desktop/movemint/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

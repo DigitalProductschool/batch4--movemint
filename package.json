@@ -4,6 +4,8 @@
   "private": true,
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "eslint": "^5.0.1",
+    "eslint-plugin-render-if": "^0.1.0",
     "jest": "^23.2.0",
     "jest-react-native": "^18.0.0",
     "prettier": "^1.13.7",
@@ -22,6 +24,7 @@
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "react-native-mauron85-background-geolocation": "^0.5.0-alpha.34",
+    "render-if": "^0.1.1",
     "toggle-switch-react-native": "^1.0.0"
   }
 }

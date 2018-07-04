@@ -36,16 +36,16 @@
         "source": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "/home/parth/Codes/movemint/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_btn_colored_material.xml"
+        "merged": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_switch_thumb_material.xml"
     },
     {
         "merged": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
         "source": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_switch_thumb_material.xml"
+        "merged": "/home/parth/Codes/movemint/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/home/parth/Codes/movemint/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/Users/robinbux/Desktop/movemint/android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
