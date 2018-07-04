@@ -11,7 +11,7 @@ import {
   LayoutAnimation
 } from "react-native";
 import BackgroundGeolocation from "react-native-mauron85-background-geolocation";
-import renderIf from './renderIf'
+import renderIf from "./renderIf";
 import ToggleSwitch from "toggle-switch-react-native";
 
 const { UIManager } = NativeModules;
@@ -38,6 +38,8 @@ class BgTracking extends Component {
       startButtonBorderColor: "#79CDBE",
       startButtonBorderWidth: 80,
 
+      currentButtonText: "rec",
+
       initialStartButtonColor: "#E0ECF1",
       initialStartButtonWidth: 310,
       initialStartButtonHeight: 310,
@@ -52,12 +54,17 @@ class BgTracking extends Component {
       stopButtonBorderColor: "#79CDBE",
       stopButtonBorderWidth: 33,
 
-      initalStopButtonColor: "red",
-      initalStopButtonWidth: 155,
-      initalStopButtonHeight: 155,
-      initalStopButtonBorderRadius: 30,
-      initalStopButtonBorderColor: "#79CDBE",
-      initalStopButtonBorderWidth: 33
+      timerTextAlignConst: "center",
+      timerFontFamilyConst: "Roboto",
+      timerColorConst: "#A2ABB8",
+      timerFontSize: 76,
+      timerMargin: 40,
+
+      initialHomeTimerFontSize: 76,
+      initialHomeTimerMargin: 40,
+
+      recordingTimerFontSize: 30,
+      recordingTimerMargin: 10
     };
   }
 
@@ -197,9 +204,12 @@ class BgTracking extends Component {
       startButtonBorderRadius: this.state.stopButtonBorderRadius,
       startButtonHeight: this.state.stopButtonHeight,
       startButtonWidth: this.state.stopButtonWidth,
-      startButtonBorderWidth: this.state.stopButtonBorderWidth
-      /*w: this.state.w + 15,
-      h: this.state.h + 15*/
+      startButtonBorderWidth: this.state.stopButtonBorderWidth,
+
+      timerFontSize: this.state.recordingTimerFontSize,
+      timerMargin: this.state.recordingTimerMargin,
+
+      currentButtonText: "stop"
     });
   }
 
@@ -211,7 +221,12 @@ class BgTracking extends Component {
       startButtonBorderRadius: this.state.initialStartButtonBorderRadius,
       startButtonHeight: this.state.initialStartButtonHeight,
       startButtonWidth: this.state.initialStartButtonWidth,
-      startButtonBorderWidth: this.state.initialStartButtonBorderWidth
+      startButtonBorderWidth: this.state.initialStartButtonBorderWidth,
+
+      timerFontSize: this.state.initialHomeTimerFontSize,
+      timerMargin: this.state.initialHomeTimerMargin,
+
+      currentButtonText: "rec"
     });
   }
 
@@ -219,7 +234,15 @@ class BgTracking extends Component {
     return (
       <View style={styles.container}>
         <View>
-          <Text style={styles.rideTimerStyle}>
+          <Text
+            style={{
+              textAlign: this.state.timerTextAlignConst,
+              fontFamily: this.state.timerFontFamilyConst,
+              color: this.state.timerColorConst,
+              fontSize: this.state.timerFontSize,
+              margin: this.state.timerMargin
+            }}
+          >
             {this.state.rideTimerHours +
               ":" +
               this.state.rideTimerMinutes +
@@ -231,10 +254,10 @@ class BgTracking extends Component {
         {renderIf(this.state.buttonStatus == "stopButton")(
           <View>
             <Image
-              style={{ width: 300, height: 200 }}
+              style={{ width: 335, height: 384, marginBottom: 20 }}
               source={{
                 uri:
-                  "https://cdn.dribbble.com/users/400493/screenshots/1697984/bikerdribbble.gif"
+                  "http://i717.photobucket.com/albums/ww173/prestonjjrtr/Funny/CatBicycle.gif"
               }}
             />
           </View>
@@ -260,7 +283,9 @@ class BgTracking extends Component {
               }
             }}
           >
-            <Text style={styles.startRecText}>REC</Text>
+            <Text style={styles.startRecText}>
+              {this.state.currentButtonText}
+            </Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -271,7 +296,7 @@ class BgTracking extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     backgroundColor: "#464b64"
   },
