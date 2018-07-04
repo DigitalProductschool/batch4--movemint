@@ -80,6 +80,7 @@ ADDED from /Users/robinbux/Desktop/movemint/android/app/src/main/AndroidManifest
 		ADDED from /Users/robinbux/Desktop/movemint/android/app/src/main/AndroidManifest.xml:24:17-81
 uses-sdk
 INJECTED from /Users/robinbux/Desktop/movemint/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [movemint:react-native-background-timer:unspecified] /Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/movemint/react-native-background-timer/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [movemint:react-native-mauron85-background-geolocation:unspecified] /Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/movemint/react-native-mauron85-background-geolocation/unspecified/AndroidManifest.xml:25:5-27:41
 MERGED from [movemint:react-native-mauron85-background-geolocation-common:unspecified:preoreoRelease] /Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/movemint/react-native-mauron85-background-geolocation-common/unspecified/preoreoRelease/AndroidManifest.xml:25:5-27:41
 MERGED from [com.google.android.gms:play-services-location:9.8.0] /Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/AndroidManifest.xml:3:5-42

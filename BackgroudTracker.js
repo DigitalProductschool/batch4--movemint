@@ -12,20 +12,30 @@ import {
 } from "react-native";
 import BackgroundGeolocation from "react-native-mauron85-background-geolocation";
 import renderIf from "./renderIf";
-import ToggleSwitch from "toggle-switch-react-native";
+import BackgroundTimer from "react-native-background-timer";
 
 const { UIManager } = NativeModules;
 
 UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
 
+function msToTime(duration) {
+    seconds = parseInt((duration / 1000) % 60),
+    minutes = parseInt((duration / (1000 * 60)) % 60),
+    hours = parseInt((duration / (1000 * 60 * 60)) % 24);
+
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  return hours + ":" + minutes + ":" + seconds;
+}
+
 class BgTracking extends Component {
   constructor() {
     super();
     this.state = {
-      rideTimerSeconds: "00",
-      rideTimerMinutes: "00",
-      rideTimerHours: "00",
+      rideTimer: "00:00:00",
       headerMessage: "No GPS signal",
       isOnBlueToggleSwitch: false,
 
@@ -64,7 +74,12 @@ class BgTracking extends Component {
       initialHomeTimerMargin: 40,
 
       recordingTimerFontSize: 30,
-      recordingTimerMargin: 10
+      recordingTimerMargin: 10,
+
+      backgroundTimerActivated: false,
+        backgroundTimerCurrentlyGoing: false,
+
+      rideDurationSeconds: 0
     };
   }
 
@@ -197,6 +212,7 @@ class BgTracking extends Component {
 
   startTrackingFunction() {
     this.startTrack();
+
     // Animate the update
     LayoutAnimation.spring();
     this.setState({
@@ -209,12 +225,15 @@ class BgTracking extends Component {
       timerFontSize: this.state.recordingTimerFontSize,
       timerMargin: this.state.recordingTimerMargin,
 
-      currentButtonText: "stop"
+      currentButtonText: "stop",
+
+      backgroundTimerActivated: true
     });
   }
 
   stopTrackingFunciton() {
     this.stopTrack();
+
     LayoutAnimation.spring();
     this.setState({
       buttonStatus: "recordingButton",
@@ -226,11 +245,49 @@ class BgTracking extends Component {
       timerFontSize: this.state.initialHomeTimerFontSize,
       timerMargin: this.state.initialHomeTimerMargin,
 
-      currentButtonText: "rec"
+      currentButtonText: "rec",
+
+      backgroundTimerActivated: false,
+
+      rideDurationSeconds: 0
     });
   }
 
+  intervalId;
+  currentMilliseconds;
+  newTime;
+
   render() {
+
+
+
+    if (this.state.backgroundTimerActivated && !this.state.backgroundTimerCurrentlyGoing) {
+
+        this.setState({
+            backgroundTimerCurrentlyGoing: true
+        })
+
+      console.log("Timer Started!");
+      this.intervalId = BackgroundTimer.setInterval(() => {
+        // this will be executed every 200 ms
+        // even when app is the the background
+        this.state.rideDurationSeconds++;
+        console.log("Dauer: " + this.state.rideDurationSeconds);
+
+        this.currentMilliseconds = this.state.rideDurationSeconds * 1000
+
+        this.newTime = msToTime(this.currentMilliseconds)
+
+        this.setState({
+            rideTimer: this.newTime
+        })
+
+      }, 1000);
+    } else if (!this.state.backgroundTimerActivated) {
+      console.log("Timer Stopped!");
+      BackgroundTimer.clearInterval(this.intervalId);
+    }
+
     return (
       <View style={styles.container}>
         <View>
@@ -243,11 +300,7 @@ class BgTracking extends Component {
               margin: this.state.timerMargin
             }}
           >
-            {this.state.rideTimerHours +
-              ":" +
-              this.state.rideTimerMinutes +
-              ":" +
-              this.state.rideTimerSeconds}{" "}
+            {this.state.rideTimer}
           </Text>
         </View>
 

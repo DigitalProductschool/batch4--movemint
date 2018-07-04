@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/animated-drawable/1.9.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7320f39e279e5451dec48c53f4619d76787390df">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-drawable-1.9.0_fda39f747337069fac0b28c23b922f4abc9f6268.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.intentfilter/android-permissions/0.1.6/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -45,6 +54,15 @@
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_20641da336173320e5ecd74353c57e1afcf83eac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_e8c716add48643106357f083cf050e1beabc0ccf.jar" />
     </item>
     <item
         is-multidex="false"
@@ -93,123 +111,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="139535a69a4239db087de9bab0bee568bf8e0b70">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/slf4j-api-1.7.21_e69005eb17d740d25de888201cefe5eb3c66f3fc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.8.0_a56e6d44047ec186b1b81a51a7efa2c3b73bf296.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9803a14716e9f462afb5742811f3456c39f3be3a">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.3.0_31fa62889d03410843d78ed85aedf10aac47f035.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/animated-base/1.9.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="99531f495b90f08fc80915a1e393ba3d06e6cb8f">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-base-1.9.0_fe97438ff7b1f80c385ffd0f324dad308f6c328f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.8.0_cd866b0a2fef7fc4f195426af45a3489c3782215.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_0f841a1c2fa8aafeac70131b19da1008cd28c10c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_a82a916f45165c6d9e1bcfb7c6ae4a1ec98bb5a4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.8.0_5db0a5c4a29d8acdcac340c2d62a2066c348f723.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.github.tony19/logback-android/1.1.1-9/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="1f4579f70d514509977ae76be02260ccb58bff5f">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.github.tony19-logback-android-1.1.1-9_4f135fb5fd7de578567b5406f8dd167a75944947.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_015e8fcc1cb5256cb3a77ff5974a5bfafb310625.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_d8743a0dd83e49c082f0d80a206368e9b18866ef.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/animated-drawable/1.9.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="7320f39e279e5451dec48c53f4619d76787390df">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-drawable-1.9.0_fda39f747337069fac0b28c23b922f4abc9f6268.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_e8c716add48643106357f083cf050e1beabc0ccf.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/robinbux/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
         jumboMode="false"
         optimize="true"
@@ -237,6 +138,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="139535a69a4239db087de9bab0bee568bf8e0b70">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/slf4j-api-1.7.21_e69005eb17d740d25de888201cefe5eb3c66f3fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -246,12 +156,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.8.0_a56e6d44047ec186b1b81a51a7efa2c3b73bf296.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.9.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="f80a752d1333efd4fb9b87da63e73909acb151af">
         <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.9.0_4dc8afea5bffb66ddaff66abea82c9beba049936.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9803a14716e9f462afb5742811f3456c39f3be3a">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.3.0_31fa62889d03410843d78ed85aedf10aac47f035.jar" />
     </item>
     <item
         is-multidex="false"
@@ -270,6 +198,15 @@
         revision="23.0.1"
         sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
         <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_bec6a8dcba787b8f14044b3672be246d2109f738.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/animated-base/1.9.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="99531f495b90f08fc80915a1e393ba3d06e6cb8f">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-base-1.9.0_fe97438ff7b1f80c385ffd0f324dad308f6c328f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -318,6 +255,42 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.8.0_cd866b0a2fef7fc4f195426af45a3489c3782215.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_0f841a1c2fa8aafeac70131b19da1008cd28c10c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_a82a916f45165c6d9e1bcfb7c6ae4a1ec98bb5a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.8.0_5db0a5c4a29d8acdcac340c2d62a2066c348f723.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.9.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -333,6 +306,42 @@
         revision="23.0.1"
         sha1="ac7146d3a0a814e58ae6305ffbd708f1e7d4385c">
         <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-animated-gif-1.9.0_52f9cc376033d5b340b3b4f85416635924a0b709.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/com.github.tony19/logback-android/1.1.1-9/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1f4579f70d514509977ae76be02260ccb58bff5f">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/com.github.tony19-logback-android-1.1.1-9_4f135fb5fd7de578567b5406f8dd167a75944947.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/exploded-aar/movemint/react-native-background-timer/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37a5cc67cbd4e1ecbfd53e148c7e19ad1254d5d8">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/movemint-react-native-background-timer-unspecified_f33a1d6706b028a1a2465094f50e735401ff3c0b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_015e8fcc1cb5256cb3a77ff5974a5bfafb310625.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robinbux/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/robinbux/Desktop/movemint/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_d8743a0dd83e49c082f0d80a206368e9b18866ef.jar" />
     </item>
 
 </items>
