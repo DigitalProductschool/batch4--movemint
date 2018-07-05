@@ -13,6 +13,7 @@ import {
 import BackgroundGeolocation from "react-native-mauron85-background-geolocation";
 import renderIf from "./renderIf";
 import BackgroundTimer from "react-native-background-timer";
+import GifComponent from "./src/components/GifComponent/GifComponent"
 
 const { UIManager } = NativeModules;
 
@@ -50,14 +51,12 @@ class BgTracking extends Component {
 
       currentButtonText: "rec",
 
-      initialStartButtonColor: "#E0ECF1",
       initialStartButtonWidth: 310,
       initialStartButtonHeight: 310,
       initialStartButtonBorderRadius: 310 / 2,
       initialStartButtonBorderColor: "#79CDBE",
       initialStartButtonBorderWidth: 80,
 
-      stopButtonColor: "red",
       stopButtonWidth: 155,
       stopButtonHeight: 155,
       stopButtonBorderRadius: 30,
@@ -257,6 +256,7 @@ class BgTracking extends Component {
   currentMilliseconds;
   newTime;
 
+
   render() {
 
 
@@ -305,15 +305,7 @@ class BgTracking extends Component {
         </View>
 
         {renderIf(this.state.buttonStatus == "stopButton")(
-          <View>
-            <Image
-              style={{ width: 335, height: 384, marginBottom: 20 }}
-              source={{
-                uri:
-                  "http://i717.photobucket.com/albums/ww173/prestonjjrtr/Funny/CatBicycle.gif"
-              }}
-            />
-          </View>
+            <GifComponent/>
         )}
 
         <View /*style={{ backgroundColor: "red" }}*/>
