@@ -1,30 +1,8 @@
 import React, { Component } from 'react';
 import { Alert, View, Button, Text, StyleSheet } from 'react-native';
-
+import realm from './realm'
 const Realm = require('realm');
 
-const Trips = {
-  schema: [{
-    name: 'Trips',
-    properties: {
-      tripID: { type: 'int' },
-      latLon: { type: 'string[]' }
-    }
-  }]
-};
-
-const Users = {
-  schema: [{
-    name: 'Users',
-    properties: {
-      userName: { type: 'string' },
-      userID: { type: 'int' },
-      totalDistance: { type: 'int' },
-      totalTrips: { type: 'int' },
-      trips: { type: 'Trips[]' }
-    }
-  }]
-};
 
 class Database extends Component {
   constructor(props) {
@@ -32,31 +10,48 @@ class Database extends Component {
     this.state = { realm: null };
   }
 
-  componentWillMount() {
-    Realm.open(
-      Trips, Users
-    ).then(realm => {
+  gottheLocation() {
+    console.log('yoyo');
       realm.write(() => {
         realm.create('Users', 
-        { userID: 1, userName: 'Parth', totalDistance: 10, totalTrips: 1, 
-      trips: ['Trips', { tripID: 1, latlon: ['45, 45'] }] });
+        { 
+          userName: 'Parth', 
+          userID: 1, 
+          totalDistance: 10, 
+          totalTrips: 1, 
+          trips:[{ 
+            tripID: 1, 
+            latLon: ['45, 45', '46, 46'], 
+          }],
+        });
+        //let allusers = realm.objects('Users');
+        //realm.delete(allusers);
       });
       this.setState({ realm });
-    });
+      let allusers = realm.objects('Users');
+        console.log('users')
+        for (let p of allusers) {
+            console.log(`  ${p.userName}`);
+        }
   }
-
+  componentDidMount() {
+    console.log('Component Did Mount')
+    this.gottheLocation();
+  }
   render() {
-    const info = this.state.realm
-      ? 'Number of users till now: ' + this.state.realm.objects('Users').length
-      : 'Loading...';
+    //{this.gotLocation}
+    
+    // const info = this.state.realm
+    //   ? 'Number of users till now: ' + this.state.realm.objects('').length
+    //   : 'Loading.';
 
     return (
       <View>
         <Text>
-          {info}
+        yo
         </Text>
       </View>
-    );
+    )
   }
 }
 export default Database;
