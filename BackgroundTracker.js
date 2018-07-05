@@ -111,7 +111,7 @@ class BackgroundTracking extends Component {
   render() {
     return (
       <View style={styles.container}>
-      {/* <Database /> */}
+      <Database />
         <View style={styles.buttonContainer}>
           <Button title="Start tracking" onPress={this.startTrack}/>
         </View>

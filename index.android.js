@@ -3,13 +3,27 @@ import { Alert, View, Button, Text, StyleSheet } from 'react-native';
 
 const Realm = require('realm');
 
-const datatable = {
-  name: 'Car',
-  properties: {
-    make:  'string',
-    model: 'string',
-    miles: {type: 'int', default: 0},
-  }
+const Trips = {
+  schema: [{
+    name: 'Trips',
+    properties: {
+      tripID: { type: 'int' },
+      latLon: { type: 'string[]' }
+    }
+  }]
+};
+
+const Users = {
+  schema: [{
+    name: 'Users',
+    properties: {
+      userName: { type: 'string' },
+      userID: { type: 'int' },
+      totalDistance: { type: 'int' },
+      totalTrips: { type: 'int' },
+      trips: { type: 'Trips[]' }
+    }
+  }]
 };
 
 class Database extends Component {
@@ -19,11 +33,13 @@ class Database extends Component {
   }
 
   componentWillMount() {
-    Realm.open({
-      schema: [{name: 'Dog', properties: {name: 'string'}}]
-    }).then(realm => {
+    Realm.open(
+      Trips, Users
+    ).then(realm => {
       realm.write(() => {
-        realm.create('Dog', {name: 'Rex'});
+        realm.create('Users', 
+        { userID: 1, userName: 'Parth', totalDistance: 10, totalTrips: 1, 
+      trips: ['Trips', { tripID: 1, latlon: ['45, 45'] }] });
       });
       this.setState({ realm });
     });
@@ -31,7 +47,7 @@ class Database extends Component {
 
   render() {
     const info = this.state.realm
-      ? 'Number of dogs in this Realm: ' + this.state.realm.objects('Dog').length
+      ? 'Number of users till now: ' + this.state.realm.objects('Users').length
       : 'Loading...';
 
     return (
