@@ -16,27 +16,17 @@ import BackgroundTimer from "react-native-background-timer";
 import GifComponent from "./src/components/GifComponent/GifComponent"
 import { startTrack } from "./src/utilities/startTrack";
 import { stopTrack } from "./src/utilities/stopTrack";
+import { msToTime } from "./src/utilities/msToTime";
+import { startTrackingFunction } from "./src/utilities/startTrackingFunction";
 
 const { UIManager } = NativeModules;
 
 UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
 
-function msToTime(duration) {
-    seconds = parseInt((duration / 1000) % 60),
-    minutes = parseInt((duration / (1000 * 60)) % 60),
-    hours = parseInt((duration / (1000 * 60 * 60)) % 24);
-
-  hours = hours < 10 ? "0" + hours : hours;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
-
-  return hours + ":" + minutes + ":" + seconds;
-}
-
 class BgTracking extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       rideTimer: "00:00:00",
       headerMessage: "No GPS signal",
@@ -87,26 +77,26 @@ class BgTracking extends Component {
 
 
 
-  startTrackingFunction() {
-    startTrack();
-
-    // Animate the update
-    LayoutAnimation.spring();
-    this.setState({
-      buttonStatus: "stopButton",
-      startButtonBorderRadius: this.state.stopButtonBorderRadius,
-      startButtonHeight: this.state.stopButtonHeight,
-      startButtonWidth: this.state.stopButtonWidth,
-      startButtonBorderWidth: this.state.stopButtonBorderWidth,
-
-      timerFontSize: this.state.recordingTimerFontSize,
-      timerMargin: this.state.recordingTimerMargin,
-
-      currentButtonText: "stop",
-
-      backgroundTimerActivated: true
-    });
-  }
+  // startTrackingFunction() {
+  //   startTrack();
+  //
+  //   // Animate the update
+  //   LayoutAnimation.spring();
+  //   this.setState({
+  //     buttonStatus: "stopButton",
+  //     startButtonBorderRadius: this.state.stopButtonBorderRadius,
+  //     startButtonHeight: this.state.stopButtonHeight,
+  //     startButtonWidth: this.state.stopButtonWidth,
+  //     startButtonBorderWidth: this.state.stopButtonBorderWidth,
+  //
+  //     timerFontSize: this.state.recordingTimerFontSize,
+  //     timerMargin: this.state.recordingTimerMargin,
+  //
+  //     currentButtonText: "stop",
+  //
+  //     backgroundTimerActivated: true
+  //   });
+  // }
 
   stopTrackingFunciton() {
     stopTrack();
@@ -200,7 +190,7 @@ class BgTracking extends Component {
             }}
             onPress={() => {
               if (this.state.buttonStatus == "recordingButton") {
-                this.startTrackingFunction();
+                startTrackingFunction(this.state, this);
               } else {
                 this.stopTrackingFunciton();
               }
