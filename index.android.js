@@ -1,46 +1,51 @@
 import React, { Component } from 'react';
 import { Alert, View, Button, Text, StyleSheet } from 'react-native';
 import realm from './realm'
-const Realm = require('realm');
-
 
 class Database extends Component {
   constructor(props) {
     super(props);
-    this.state = { realm: null };
   }
 
   gottheLocation() {
-    console.log('yoyo');
-      realm.write(() => {
-        realm.create('Users', 
-        { 
-          userName: 'Parth', 
-          userID: 1, 
-          totalDistance: 10, 
-          totalTrips: 1, 
-          trips:[{ 
-            tripID: 1, 
-            latLon: ['45, 45', '46, 46'], 
+    realm.write(() => {
+      realm.create('Users',
+        {
+          userName: 'Parth',
+          userID: 1,
+          totalDistance: 10,
+          totalTrips: 1,
+          trips: [{
+            tripID: 1,
+            lat: ['45', '46'],
+            lon: ['48', '46'],
+            time: '10101010010'
           }],
         });
-        //let allusers = realm.objects('Users');
-        //realm.delete(allusers);
-      });
-      this.setState({ realm });
+    });
+    let allusers = realm.objects('Users');
+    console.log('users');
+    for (let p of allusers) {
+      console.log(`  ${p.userName}`);
+    }
+  }
+
+  deleteAllUsers() {
+    realm.write(() => {
       let allusers = realm.objects('Users');
-        console.log('users')
-        for (let p of allusers) {
-            console.log(`  ${p.userName}`);
-        }
+      console.log('Deleting all users.');
+      realm.delete(allusers);
+    })
   }
   componentDidMount() {
     console.log('Component Did Mount')
+    if (realm.objects('Users').length > 3) { this.deleteAllUsers(); }
+
     this.gottheLocation();
   }
   render() {
     //{this.gotLocation}
-    
+
     // const info = this.state.realm
     //   ? 'Number of users till now: ' + this.state.realm.objects('').length
     //   : 'Loading.';
@@ -48,7 +53,7 @@ class Database extends Component {
     return (
       <View>
         <Text>
-        yo
+
         </Text>
       </View>
     )
