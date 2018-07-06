@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import { Alert, View, Button, Text, StyleSheet } from 'react-native';
 import BackgroundGeolocation from 'react-native-mauron85-background-geolocation';
 import Database from './index.android.js'
+import renderif from './renderif'
 
 const Realm = require('realm');
 
 class BackgroundTracking extends Component {
+  state = {
+    buttonStatus: "startButton"
+  }
+  lon = [];
+  lat = [];
+  timestamp = [];
+
   startTrack = () => {
     //Alert.alert("Tracking Started!");
 
@@ -40,6 +48,19 @@ class BackgroundTracking extends Component {
       // to perform long running operation on iOS
       // you need to create background task
       console.log(location);
+      this.lon.push(location.longitude)
+      this.lat.push(location.latitude)
+      this.timestamp.push(location.time)
+      /*
+      Location object :
+      { 
+        longitude: 11.592709, 
+        altitude: 640.0999755859375, 
+        latitude: 48.1766029, 
+        time: 1530877974803, 
+        mockLocationsEnabled: false,
+      }
+     */
       BackgroundGeolocation.startTask(taskKey => {
         // execute long running task
         // eg. ajax post location
@@ -103,6 +124,9 @@ class BackgroundTracking extends Component {
 
   stopTrack = () => {
     // unregister all event listeners
+    this.setState({
+      buttonStatus: "stopButton"
+    })
     BackgroundGeolocation.stop();
     BackgroundGeolocation.events.forEach(event => BackgroundGeolocation.removeAllListeners(event));
     Alert.alert("Tracking stopped!");
@@ -111,26 +135,28 @@ class BackgroundTracking extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Database />
         <View style={styles.buttonContainer}>
           <Button title="Start tracking" onPress={this.startTrack} />
         </View>
         <View style={styles.buttonContainer}>
           <Button color='red' title="Stop tracking" onPress={this.stopTrack} />
+          {
+            renderif(this.state.buttonStatus == "stopButton")
+          (< Database lat = { this.lat } lon = { this.lon } timestamp = { this.timestamp } />)}
         </View>
       </View>
-    )
-  }
-}
+        )
+      }
+    }
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+          container: {
+          flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
   buttonContainer: {
-    flex: 1,
-  }
-});
+          flex: 1,
+      }
+    });
 export default BackgroundTracking;

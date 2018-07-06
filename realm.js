@@ -7,7 +7,7 @@ Tripsdb.schema = {
         tripID: { type: 'int' },
         lat: { type: 'list', objectType: 'string' },
         lon: { type: 'list', objectType: 'string' },
-        time: { type: 'string' }
+        timestamp: { type: 'list', objectType: 'string' }
     }
 };
 

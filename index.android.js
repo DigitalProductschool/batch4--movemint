@@ -16,17 +16,17 @@ class Database extends Component {
           totalDistance: 10,
           totalTrips: 1,
           trips: [{
-            tripID: 1,
-            lat: ['45', '46'],
-            lon: ['48', '46'],
-            time: '10101010010'
+            tripID: 2,
+            lat: this.props.lat,
+            lon: this.props.lon,
+            timestamp: this.props.timestamp
           }],
         });
     });
     let allusers = realm.objects('Users');
     console.log('users');
     for (let p of allusers) {
-      console.log(`  ${p.userName}`);
+      console.log(JSON.stringify(p.trips));
     }
   }
 
@@ -53,7 +53,6 @@ class Database extends Component {
     return (
       <View>
         <Text>
-
         </Text>
       </View>
     )
