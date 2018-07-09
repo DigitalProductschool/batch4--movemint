@@ -48,9 +48,9 @@ class BackgroundTracking extends Component {
       // to perform long running operation on iOS
       // you need to create background task
       console.log(location);
-      this.lon.push(location.longitude)
-      this.lat.push(location.latitude)
-      this.timestamp.push(location.time)
+      this.lon.push(location.longitude.toString())
+      this.lat.push(location.latitude.toString())
+      this.timestamp.push(location.time.toString())
       /*
       Location object :
       { 
