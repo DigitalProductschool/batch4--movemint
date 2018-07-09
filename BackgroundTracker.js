@@ -4,6 +4,7 @@ import { View, StyleSheet } from "react-native";
 import GifComponent from "./src/components/GifComponent/GifComponent";
 import StartStopButton from "./src/components/StartStopButton/StartStopButton";
 import KilometerDisplay from "./src/components/KilometerDisplay/KilometerDisplay";
+import DatabaseManager from './src/components/DatabaseManager/DatabaseManager'
 
 import renderIf from "./renderIf";
 
@@ -15,6 +16,7 @@ class BackgroundTracker extends Component {
             renderDatabase : false,
         };
         this.changeStateScreenState = this.changeStateScreenState.bind(this);
+        this.pushToDatabase = this.pushToDatabase.bind(this);
     }
 
     geoStates = {
@@ -26,7 +28,7 @@ class BackgroundTracker extends Component {
     pushToDatabase() {
         this.setState({
             renderDatabase : true
-        })
+        });
     }
 
     changeStateScreenState() {
@@ -49,11 +51,9 @@ class BackgroundTracker extends Component {
                     geoStates={this.geoStates}
                     pushToDatabase={this.pushToDatabase}
                     />
-                {renderIf(this.state.screenState == "Tracking")(
-                    < Database geoStates={this.states} />
+                {renderIf(this.state.renderDatabase)(
+                    < DatabaseManager geoStates={this.geoStates} />
                 )}
-                
-                
             </View>
         )
     }

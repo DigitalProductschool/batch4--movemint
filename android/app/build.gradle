@@ -137,6 +137,7 @@ android {
 }
 
 dependencies {
+    compile project(':realm')
     compile project(':react-native-background-timer')
     compile project(':react-native-mauron85-background-geolocation')
     compile fileTree(dir: "libs", include: ["*.jar"])
