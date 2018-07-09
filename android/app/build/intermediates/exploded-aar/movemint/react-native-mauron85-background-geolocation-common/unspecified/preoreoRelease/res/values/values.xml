@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="account_type" translatable="false">com.movemint</string>
-    <string name="app_name">app_name</string>
-    <string name="content_authority" translatable="false">com.movemint.provider</string>
-</resources>
