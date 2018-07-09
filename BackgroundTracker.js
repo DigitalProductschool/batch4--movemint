@@ -11,9 +11,22 @@ class BackgroundTracker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            screenState: "Home"
+            screenState: "Home",
+            renderDatabase : false,
         };
         this.changeStateScreenState = this.changeStateScreenState.bind(this);
+    }
+
+    geoStates = {
+        lon : [],
+        lat : [],
+        timestamp : []
+    }
+
+    pushToDatabase() {
+        this.setState({
+            renderDatabase : true
+        })
     }
 
     changeStateScreenState() {
@@ -31,7 +44,16 @@ class BackgroundTracker extends Component {
                 {renderIf(this.state.screenState == "Tracking")(
                     <GifComponent />
                 )}
-                <StartStopButton changeStateScreenState={this.changeStateScreenState}/>
+                <StartStopButton 
+                    changeStateScreenState={this.changeStateScreenState} 
+                    geoStates={this.geoStates}
+                    pushToDatabase={this.pushToDatabase}
+                    />
+                {renderIf(this.state.screenState == "Tracking")(
+                    < Database geoStates={this.states} />
+                )}
+                
+                
             </View>
         )
     }

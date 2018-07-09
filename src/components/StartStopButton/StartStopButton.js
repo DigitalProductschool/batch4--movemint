@@ -47,6 +47,17 @@ class StartStopButton extends Component {
         stopButtonBorderWidth: 33
     };
 
+    lat=[];
+    lon=[];
+    timestamp=[];
+
+    updateLocation( lat, lon, timestamp) {
+        this.lat = lat;
+        this.lon = lon;
+        this.timestamp = timestamp;
+    }
+
+
     startTrackingFunction() {
         startTrack();
 
@@ -67,6 +78,12 @@ class StartStopButton extends Component {
 
     stopTrackingFunction() {
         stopTrack();
+        
+        this.props.geoStates.lat = this.lat;
+        this.props.geoStates.lon = this.lon;
+        this.props.geoStates.timestamp = this.timestamp;
+
+        this.props.pushToDatabase();
 
         LayoutAnimation.spring();
         this.setState({
@@ -82,6 +99,8 @@ class StartStopButton extends Component {
         });
         this.props.changeStateScreenState();
     }
+
+    
 
     render() {
         return (
@@ -100,6 +119,7 @@ class StartStopButton extends Component {
                     if (this.state.buttonStatus == "recordingButton") {
                         this.startTrackingFunction();
                     } else {
+
                         this.stopTrackingFunction();
                     }
                 }}
