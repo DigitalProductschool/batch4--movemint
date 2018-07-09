@@ -1,3 +1,3 @@
-import Backgroundtracker from './BackgroudTracker';
+import Backgroundtracker from './BackgroundTracker';
 
 export default Backgroundtracker;

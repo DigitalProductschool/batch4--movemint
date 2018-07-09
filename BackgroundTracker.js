@@ -7,7 +7,7 @@ import KilometerDisplay from "./src/components/KilometerDisplay/KilometerDisplay
 
 import renderIf from "./renderIf";
 
-class BackgroudTracker extends Component {
+class BackgroundTracker extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -46,5 +46,5 @@ const styles = StyleSheet.create({
     }
 });
 
-export default BackgroudTracker;
+export default BackgroundTracker;
 
