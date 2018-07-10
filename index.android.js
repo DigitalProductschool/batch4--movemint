@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Alert, View, Button, Text, StyleSheet } from 'react-native';
-import realm from '../../utilities/realm'
+import realm from './src/utilities/realm'
 
 class Database extends Component {
   constructor(props) {

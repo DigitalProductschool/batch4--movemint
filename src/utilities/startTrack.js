@@ -1,14 +1,14 @@
 import BackgroundGeolocation from "react-native-mauron85-background-geolocation";
 import StartStopButton from "../components/StartStopButton/StartStopButton";
 
-export const startTrack = () => {
+export const startTrack = (updateLocation) => {
   //Alert.alert("Tracking Started!");
 
   lon = [];
   lat = [];
   timestamp = []; 
 
-  StartStopComponent = new StartStopButton()
+  //StartStopComponent = new StartStopButton()
 
   BackgroundGeolocation.configure({
     desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
@@ -42,11 +42,11 @@ export const startTrack = () => {
   
     console.log(location);
     this.lon.push(location.longitude.toString())
-    //this.props.updateLocation(lon, location.longitude.toString())
     this.lat.push(location.latitude.toString())
     this.timestamp.push(location.time.toString())
+    //this.props.updateLocation(lon, location.longitude.toString())
     
-    StartStopComponent.updateLocation(this.lon, this.lat, this.timestamp);
+    updateLocation(this.lon, this.lat, this.timestamp);
     
     BackgroundGeolocation.startTask(taskKey => {
       // execute long running task
