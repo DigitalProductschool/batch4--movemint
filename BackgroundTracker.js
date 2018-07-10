@@ -14,18 +14,27 @@ class BackgroundTracker extends Component {
         this.state = {
             screenState: "Home",
             renderDatabase : false,
+            geoStates : {
+                lon : [],
+                lat : [],
+                timestamp : []
+            }
         };
         this.changeStateScreenState = this.changeStateScreenState.bind(this);
         this.changeDatabaseFalse = this.changeDatabaseFalse.bind(this);
         this.changeDatabaseTrue = this.changeDatabaseTrue.bind(this);
+        this.updateValues = this.updateValues.bind(this);
     }
+    updateValues(lat, lon, timestamp) {
+        this.setState({
+            geoStates : {
+                lon : lat,
+                lat :  lon,
+                timestamp : timestamp
 
-    geoStates = {
-        lon : [],
-        lat : [],
-        timestamp : []
+            }
+        })
     }
-
     changeDatabaseTrue() {
         //let newStatus = this.state.renderDatabase === true ? false : true;
         //console.log('Database changed to true');
@@ -59,13 +68,13 @@ class BackgroundTracker extends Component {
                 )}
                 <StartStopButton 
                     changeStateScreenState={this.changeStateScreenState} 
-                    geoStates={this.geoStates}
+                    updateValues={this.updateValues}
                     changeDatabaseFalse={this.changeDatabaseFalse}
                     changeDatabaseTrue={this.changeDatabaseTrue}
                     />
                 {renderIf(this.state.renderDatabase)(
                     <DatabaseManager 
-                    geoStates={this.geoStates} 
+                    geoStates={this.state.geoStates} 
                     screenState={this.state.screenState}
                     />
 
