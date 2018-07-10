@@ -38,11 +38,7 @@ export const startTrack = (lat, lon, timestamp) => {
     lon.push(location.longitude.toString())
     lat.push(location.latitude.toString())
     timestamp.push(location.time.toString())
-    console.log('in funcnew',lon)
-    //this.props.updateLocation(lon, location.longitude.toString())
-    
-    //updateLocation(this.lon, this.lat, this.timestamp);
-    
+   
     BackgroundGeolocation.startTask(taskKey => {
       // execute long running task
       // eg. ajax post location

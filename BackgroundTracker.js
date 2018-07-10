@@ -28,7 +28,7 @@ class BackgroundTracker extends Component {
 
     changeDatabaseTrue() {
         //let newStatus = this.state.renderDatabase === true ? false : true;
-        console.log('Database changed to true');
+        //console.log('Database changed to true');
         this.setState({
             renderDatabase : true
         });
@@ -36,7 +36,7 @@ class BackgroundTracker extends Component {
 
     changeDatabaseFalse() {
         //let newStatus = this.state.renderDatabase === true ? false : true;
-        console.log('Database changed to false');
+        //console.log('Database changed to false');
         this.setState({
             renderDatabase : false
         });

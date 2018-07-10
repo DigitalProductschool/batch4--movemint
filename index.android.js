@@ -27,9 +27,6 @@ class Database extends Component {
     let allusers = realm.objects('Users');
     console.log('users');
     console.log(JSON.stringify(allusers))
-    // for (let p of allusers) {
-    //   console.log(JSON.stringify(p.trips));
-    //}
   }
 
   deleteAllUsers() {
