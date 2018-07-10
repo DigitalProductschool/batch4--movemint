@@ -4,7 +4,6 @@ import { View, StyleSheet } from "react-native";
 import GifComponent from "./src/components/GifComponent/GifComponent";
 import StartStopButton from "./src/components/StartStopButton/StartStopButton";
 import KilometerDisplay from "./src/components/KilometerDisplay/KilometerDisplay";
-//import DatabaseManager from './src/components/DatabaseManager/DatabaseManager'
 import DatabaseManager from './index.android'
 
 import renderIf from "./renderIf";

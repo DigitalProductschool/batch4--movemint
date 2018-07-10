@@ -51,17 +51,8 @@ class StartStopButton extends Component {
         stopButtonBorderWidth: 33
     };
 
-    updateLocation( lat, lon, timestamp) {
-        //console.log(this.props.geoStates)
-        this.lat = lat;
-        this.lon = lon;
-        this.timestamp = timestamp;
-        console.log('in func', this.lat)
-    }
-
-
     startTrackingFunction() {
-        startTrack(this.updateLocation);
+        startTrack(this.lat, this.lon, this.timestamp);
     
         LayoutAnimation.spring();
         this.setState({
