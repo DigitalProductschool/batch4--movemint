@@ -3,6 +3,7 @@ package com.movemint;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.realm.react.RealmReactPackage;
 import com.ocetnik.timer.BackgroundTimerPackage;
 import com.marianhello.bgloc.react.BackgroundGeolocationPackage;
 import com.facebook.react.ReactNativeHost;
@@ -26,7 +27,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new BackgroundTimerPackage(),
-            new BackgroundGeolocationPackage()
+            new BackgroundGeolocationPackage(),
+            new RealmReactPackage()
       );
     }
 

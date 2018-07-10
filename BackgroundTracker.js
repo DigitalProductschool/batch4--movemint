@@ -4,6 +4,7 @@ import { View, StyleSheet } from "react-native";
 import GifComponent from "./src/components/GifComponent/GifComponent";
 import StartStopButton from "./src/components/StartStopButton/StartStopButton";
 import KilometerDisplay from "./src/components/KilometerDisplay/KilometerDisplay";
+import DatabaseManager from './index.android'
 
 import renderIf from "./renderIf";
 
@@ -11,9 +12,34 @@ class BackgroundTracker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            screenState: "Home"
+            screenState: "Home",
+            renderDatabase : false,
         };
         this.changeStateScreenState = this.changeStateScreenState.bind(this);
+        this.changeDatabaseFalse = this.changeDatabaseFalse.bind(this);
+        this.changeDatabaseTrue = this.changeDatabaseTrue.bind(this);
+    }
+
+    geoStates = {
+        lon : [],
+        lat : [],
+        timestamp : []
+    }
+
+    changeDatabaseTrue() {
+        //let newStatus = this.state.renderDatabase === true ? false : true;
+        console.log('Database changed to true');
+        this.setState({
+            renderDatabase : true
+        });
+    }
+
+    changeDatabaseFalse() {
+        //let newStatus = this.state.renderDatabase === true ? false : true;
+        console.log('Database changed to false');
+        this.setState({
+            renderDatabase : false
+        });
     }
 
     changeStateScreenState() {
@@ -31,7 +57,19 @@ class BackgroundTracker extends Component {
                 {renderIf(this.state.screenState == "Tracking")(
                     <GifComponent />
                 )}
-                <StartStopButton changeStateScreenState={this.changeStateScreenState}/>
+                <StartStopButton 
+                    changeStateScreenState={this.changeStateScreenState} 
+                    geoStates={this.geoStates}
+                    changeDatabaseFalse={this.changeDatabaseFalse}
+                    changeDatabaseTrue={this.changeDatabaseTrue}
+                    />
+                {renderIf(this.state.renderDatabase)(
+                    <DatabaseManager 
+                    geoStates={this.geoStates} 
+                    screenState={this.state.screenState}
+                    />
+
+                )}
             </View>
         )
     }

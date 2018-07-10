@@ -1,7 +1,9 @@
 import BackgroundGeolocation from "react-native-mauron85-background-geolocation";
+import StartStopButton from "../components/StartStopButton/StartStopButton";
 
-export const startTrack = () => {
+export const startTrack = (lat, lon, timestamp) => {
   //Alert.alert("Tracking Started!");
+
   BackgroundGeolocation.configure({
     desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
     stationaryRadius: 50,
@@ -31,7 +33,16 @@ export const startTrack = () => {
     // handle your locations here
     // to perform long running operation on iOS
     // you need to create background task
+  
     console.log(location);
+    lon.push(location.longitude.toString())
+    lat.push(location.latitude.toString())
+    timestamp.push(location.time.toString())
+    console.log('in funcnew',lon)
+    //this.props.updateLocation(lon, location.longitude.toString())
+    
+    //updateLocation(this.lon, this.lat, this.timestamp);
+    
     BackgroundGeolocation.startTask(taskKey => {
       // execute long running task
       // eg. ajax post location
@@ -43,7 +54,6 @@ export const startTrack = () => {
 
   BackgroundGeolocation.on("stationary", stationaryLocation => {
     // handle stationary locations here
-    console.log("haha", stationaryLocation);
     Actions.sendLocation(stationaryLocation);
   });
 
@@ -52,7 +62,7 @@ export const startTrack = () => {
   });
 
   BackgroundGeolocation.on("start", () => {
-    console.log("[INFO] BackgroundGeolocation service has been stasrted");
+    console.log("[INFO] BackgroundGeolocation service has been started");
   });
 
   BackgroundGeolocation.on("stop", () => {
