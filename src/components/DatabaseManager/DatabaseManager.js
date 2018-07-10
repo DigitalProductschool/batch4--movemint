@@ -8,6 +8,7 @@ class Database extends Component {
   }
 
   gottheLocation() {
+    // console.log(this.props.geoStates.lat)
     realm.write(() => {
       realm.create('Users',
         {
@@ -19,15 +20,16 @@ class Database extends Component {
             tripID: 2,
             lat: this.props.geoStates.lat,
             lon: this.props.geoStates.lon,
-            timestamp: this.props.geoStates.timestamp
+            timestamp: this.props.geoStates.timestamp,
           }],
         });
     });
     let allusers = realm.objects('Users');
     console.log('users');
-    for (let p of allusers) {
-      console.log('yoyo', JSON.stringify(p.trips));
-    }
+    console.log(JSON.stringify(allusers))
+    // for (let p of allusers) {
+    //   console.log(JSON.stringify(p.trips));
+    //}
   }
 
   deleteAllUsers() {
@@ -37,11 +39,21 @@ class Database extends Component {
       realm.delete(allusers);
     })
   }
+
   componentDidMount() {
     console.log('Component Did Mount')
-    if (realm.objects('Users').length > 3) { this.deleteAllUsers(); }
+    if (realm.objects('Users').length > 10) { this.deleteAllUsers(); }
 
     this.gottheLocation();
+  }
+  
+  componentDidUpdate() {
+    console.log('Component Did Update')
+    if (realm.objects('Users').length > 10) { this.deleteAllUsers(); }
+
+    console.log(this.props.screenState)
+    if(this.props.screenState=="Home")
+        this.gottheLocation();
   }
   render() {
     return (

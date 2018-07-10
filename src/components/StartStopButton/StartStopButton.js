@@ -60,7 +60,7 @@ class StartStopButton extends Component {
 
     startTrackingFunction() {
         startTrack();
-
+    
         LayoutAnimation.spring();
         this.setState({
             buttonStatus: "stopButton",
@@ -73,17 +73,19 @@ class StartStopButton extends Component {
             currentButtonBorderWidth: this.stopButtonProps.stopButtonBorderWidth
         });
         console.log("Reached start tracking function!");
+        
         this.props.changeStateScreenState();
+        //this.props.changeDatabaseFalse();
+        //this.props.changeDatabaseStatus();
     }
 
     stopTrackingFunction() {
         stopTrack();
+        //this.props.changeDatabaseTrue();
         
         this.props.geoStates.lat = this.lat;
         this.props.geoStates.lon = this.lon;
         this.props.geoStates.timestamp = this.timestamp;
-
-        this.props.pushToDatabase();
 
         LayoutAnimation.spring();
         this.setState({
@@ -97,7 +99,9 @@ class StartStopButton extends Component {
             currentButtonBorderWidth: this.startButtonProps
                 .startButtonBorderWidth
         });
+
         this.props.changeStateScreenState();
+        
     }
 
     

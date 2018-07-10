@@ -13,10 +13,11 @@ class BackgroundTracker extends Component {
         super(props);
         this.state = {
             screenState: "Home",
-            renderDatabase : false,
+            renderDatabase : true,
         };
         this.changeStateScreenState = this.changeStateScreenState.bind(this);
-        this.pushToDatabase = this.pushToDatabase.bind(this);
+        // this.changeDatabaseFalse = this.changeDatabaseFalse.bind(this);
+        // this.changeDatabaseTrue = this.changeDatabaseTrue.bind(this);
     }
 
     geoStates = {
@@ -25,11 +26,21 @@ class BackgroundTracker extends Component {
         timestamp : []
     }
 
-    pushToDatabase() {
-        this.setState({
-            renderDatabase : true
-        });
-    }
+    // changeDatabaseTrue() {
+    //     //let newStatus = this.state.renderDatabase === true ? false : true;
+    //     console.log('Database changed to true');
+    //     this.setState({
+    //         renderDatabase : true
+    //     });
+    // }
+
+    // changeDatabaseFalse() {
+    //     //let newStatus = this.state.renderDatabase === true ? false : true;
+    //     console.log('Database changed to false');
+    //     this.setState({
+    //         renderDatabase : false
+    //     });
+    // }
 
     changeStateScreenState() {
         let futureState = this.state.screenState === "Home" ? "Tracking" : "Home";
@@ -49,10 +60,13 @@ class BackgroundTracker extends Component {
                 <StartStopButton 
                     changeStateScreenState={this.changeStateScreenState} 
                     geoStates={this.geoStates}
-                    pushToDatabase={this.pushToDatabase}
                     />
                 {renderIf(this.state.renderDatabase)(
-                    < DatabaseManager geoStates={this.geoStates} />
+                    <DatabaseManager 
+                    geoStates={this.geoStates} 
+                    screenState={this.state.screenState}
+                    />
+
                 )}
             </View>
         )
