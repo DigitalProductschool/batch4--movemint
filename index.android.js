@@ -8,7 +8,6 @@ class Database extends Component {
   }
 
   gottheLocation() {
-    console.log(this.props.geoStates.lat)
     realm.write(() => {
       realm.create('Users',
         {
@@ -32,7 +31,7 @@ class Database extends Component {
   deleteAllUsers() {
     realm.write(() => {
       let allusers = realm.objects('Users');
-      console.log('Deleting all users.');
+      console.log('Limit reached. Deleting all users.');
       realm.delete(allusers);
     })
   }
