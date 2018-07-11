@@ -45,14 +45,14 @@ class Database extends Component {
         this.gottheLocation();
   }
   
-  componentDidUpdate() {
-    console.log('Component Did Update')
-    if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
+  // componentDidUpdate() {
+  //   console.log('Component Did Update')
+  //   if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
 
-    console.log(this.props.screenState)
-    if(this.props.screenState=="Home")
-        this.gottheLocation();
-  }
+  //   console.log(this.props.screenState)
+  //   if(this.props.screenState=="Home")
+  //       this.gottheLocation();
+  // }
   render() {
     return (
       <View>
