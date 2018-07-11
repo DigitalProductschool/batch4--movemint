@@ -8,7 +8,6 @@ class Database extends Component {
   }
 
   gottheLocation() {
-    console.log(this.props.geoStates.lat)
     realm.write(() => {
       realm.create('Users',
         {
@@ -32,7 +31,7 @@ class Database extends Component {
   deleteAllUsers() {
     realm.write(() => {
       let allusers = realm.objects('Users');
-      console.log('Deleting all users.');
+      console.log('Limit reached. Deleting all users.');
       realm.delete(allusers);
     })
   }
@@ -46,14 +45,14 @@ class Database extends Component {
         this.gottheLocation();
   }
   
-  componentDidUpdate() {
-    console.log('Component Did Update')
-    if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
+  // componentDidUpdate() {
+  //   console.log('Component Did Update')
+  //   if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
 
-    console.log(this.props.screenState)
-    if(this.props.screenState=="Home")
-        this.gottheLocation();
-  }
+  //   console.log(this.props.screenState)
+  //   if(this.props.screenState=="Home")
+  //       this.gottheLocation();
+  // }
   render() {
     return (
       <View>

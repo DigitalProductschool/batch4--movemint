@@ -6,11 +6,8 @@ class GifComponent extends Component {
     return (
       <View>
         <Image
-          style={{ width: 335, height: 384, marginBottom: 20 }}
-          source={{
-            uri:
-              "http://i717.photobucket.com/albums/ww173/prestonjjrtr/Funny/CatBicycle.gif"
-          }}
+          style={{ width: 400, height: 240, marginBottom: 20 }}
+          source={require('../../../assets/BikeGif/BikeGif.gif')}
         />
       </View>
     );
