@@ -3,6 +3,7 @@ import Realm from 'realm';
 class Tripsdb extends Realm.Object { }
 Tripsdb.schema = {
     name: 'Trips',
+    primaryKey: 'tripID',
     properties: {
         tripID: { type: 'int' },
         lat: { type: 'list', objectType: 'string' },
@@ -14,6 +15,7 @@ Tripsdb.schema = {
 class Usersdb extends Realm.Object { }
 Usersdb.schema = {
     name: 'Users',
+    primaryKey: 'userID',
     properties: {
         userName: { type: 'string' },
         userID: { type: 'int' },
