@@ -104,13 +104,6 @@ class BackgroundTracker extends Component {
 
                     {renderIf(this.checkOneState("Tracking"))(<GifComponent />)}
 
-                    <StartStopButton
-                        changeStateScreenState={this.changeStateScreenState}
-                        updateValues={this.updateValues}
-                        changeDatabaseFalse={this.changeDatabaseFalse}
-                        changeDatabaseTrue={this.changeDatabaseTrue}
-                        style={{ position: "absolute", zIndex: -1 }}
-                    />
                     {renderIf(this.state.renderDatabase)(
                     <DatabaseManager 
                     geoStates={this.state.geoStates} 
@@ -118,6 +111,14 @@ class BackgroundTracker extends Component {
                     />
 
                     )}
+                    <StartStopButton
+                        changeStateScreenState={this.changeStateScreenState}
+                        updateValues={this.updateValues}
+                        changeDatabaseFalse={this.changeDatabaseFalse}
+                        changeDatabaseTrue={this.changeDatabaseTrue}
+                        style={{ position: "absolute", zIndex: -1 }}
+                    />
+                    
                 </View>
                 {renderIf(this.checkTwoStates("Home", "CommunityView"))(
                     <View style={styles.bottomButtonView}>
