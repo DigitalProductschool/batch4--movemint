@@ -32,6 +32,10 @@ class StartStopButton extends Component {
             currentButtonBorderWidth: 80
         };
     }
+    
+    lat=[];
+    lon=[];
+    timestamp=[];
 
     defineStyle() {
         console.log('inside',this.props.currentScreenState)
@@ -109,17 +113,20 @@ class StartStopButton extends Component {
     }
 
     startTrackingFunction() {
-        startTrack();
+        startTrack(this.lat, this.lon, this.timestamp);
         this.changeStyleToStop()
         this.props.changeStateScreenState();
+        this.props.changeDatabaseFalse();
     }
 
     stopTrackingFunction() {
         stopTrack();
+        this.props.updateValues(this.lat, this.lon, this.timestamp)
         this.state.buttonStatus="homeButton"
 
         this.changeStyleToStart()
         this.props.changeStateScreenState();
+        this.props.changeDatabaseTrue();
     }
 
     componentDidMount(){
