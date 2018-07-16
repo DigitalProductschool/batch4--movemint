@@ -10,11 +10,23 @@ class HistoryButton extends Component {
         };
     }
 
-    onButtonPress() {
-        let futureColor = this.state.buttonColor === "#a2abb8" ? "#79CDBE" : "#a2abb8";
+    changeColorAndState() {
+        let futureColor = this.props.currentScreenState === "HistoryView" ? "#a2abb8" : "#79CDBE"
         this.setState({
             buttonColor: futureColor
         });
+        this.props.changeStateScreenStateHistory();
+    }
+
+    componentDidUpdate(){
+        console.log("Entered Component Did Update History Button")
+        console.log("State inside History Button: " + this.props.currentScreenState)
+        console.log("Current Button Color: " + this.state.buttonColor)
+        if(this.props.currentScreenState !== "HistoryView" && this.state.buttonColor == "#79CDBE"){
+            this.setState({
+                buttonColor: "#a2abb8"
+            });
+        }
     }
 
     render() {
@@ -23,9 +35,9 @@ class HistoryButton extends Component {
                 name="history"
                 size={60}
                 color={this.state.buttonColor}
-                onPress={() => this.onButtonPress()}
+                onPress={() => this.changeColorAndState()}
                 backgroundColor="#424a63"
-                iconStyle={{marginRight: 0}}
+                iconSstyle={{marginRight: 0}}
             />
         )
     }
