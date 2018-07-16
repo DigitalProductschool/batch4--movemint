@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, TouchableHighlight } from "react-native";
 
 import GifComponent from "./src/components/GifComponent/GifComponent";
 import StartStopButton from "./src/components/StartStopButton/StartStopButton";
@@ -32,7 +32,7 @@ class BackgroundTracker extends Component {
         this.changeDatabaseTrue = this.changeDatabaseTrue.bind(this);
         this.updateValues = this.updateValues.bind(this);
         this.changeStateScreenStateCommunity = this.changeStateScreenStateCommunity.bind(this);
-        this.changeStateScreenStateHistory = this.changeStateScreenStateHistory.bind(   this);
+        this.changeStateScreenStateHistory = this.changeStateScreenStateHistory.bind(this);
     }
     updateValues(lat, lon, timestamp) {
         this.setState({
@@ -61,33 +61,34 @@ class BackgroundTracker extends Component {
     }
 
     changeStateScreenState() {
-        let futureState = this.state.screenState === "Home" ? "Tracking" : "Home";
+        let futureState = this.state.screenState === "Tracking" ? "Home" : "Tracking";
         this.setState({
             screenState: futureState
         });
     }
 
-        changeStateScreenStateCommunity() {
-            let futureState =
-                this.state.screenState === "Home" ||
-                this.state.screenState == "HistoryView"
-                    ? "CommunityView"
-                    : "Home";
-            this.setState({
-                screenState: futureState
-            });
-        }
+    changeStateScreenStateCommunity() {
+        let futureState =
+            this.state.screenState === "Home" ||
+            this.state.screenState == "HistoryView"
+                ? "CommunityView"
+                : "Home";
+        this.setState({
+            screenState: futureState
+        });
+    }
     
-        changeStateScreenStateHistory() {
-            let futureState =
-                this.state.screenState === "Home" ||
-                this.state.screenState == "CommunityView"
-                    ? "HistoryView"
-                    : "Home";
-            this.setState({
-                screenState: futureState
-            });
-        }
+    changeStateScreenStateHistory() {
+        let futureState =
+            this.state.screenState === "Home" ||
+            this.state.screenState == "CommunityView"
+                ? "HistoryView"
+                : "Home";
+        this.setState({
+            screenState: futureState
+        });
+    }
+
     checkOneState(firstState) {
                 return this.state.screenState === firstState ? true : false;
             }
@@ -108,19 +109,19 @@ class BackgroundTracker extends Component {
     }    
 
     onSkipBtnHandle = (index) => {
-                Alert.alert('Skip');
-                console.log(index);
-            }
-            doneBtnHandle = () => {
-                Alert.alert('Done');
-            }
-            nextBtnHandle = (index) => {
-                Alert.alert('Next');
-                console.log(index);
-            }
-            onSlideChangeHandle = (index, total) => {
-                console.log(index, total);
-            }
+        Alert.alert('Skip');
+        console.log(index);
+    }
+    doneBtnHandle = () => {
+        Alert.alert('Done');
+    }
+    nextBtnHandle = (index) => {
+        Alert.alert('Next');
+        console.log(index);
+    }
+    onSlideChangeHandle = (index, total) => {
+        console.log(index, total);
+    }
 
     render() {
         console.log("************************************")
