@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import { View, Image } from "react-native";
+import {View, Image, Dimensions} from "react-native";
+
+const { width, height } = Dimensions.get('window')
 
 class GifComponent extends Component {
   render() {
     return (
       <View>
         <Image
-          style={{ width: 400, height: 240, marginBottom: 20 }}
+          style={{ width: width * 1.15, height: width*0.6, marginBottom: 60 }}
           source={require('../../../assets/BikeGif/BikeGif.gif')}
         />
       </View>

@@ -5,22 +5,24 @@ import {
     TouchableHighlight,
     StyleSheet,
     LayoutAnimation,
-    NativeModules
+    NativeModules, Dimensions
 } from "react-native";
 import { startTrack } from "../../utilities/startTrack";
 import { stopTrack } from "../../utilities/stopTrack";
 
+const { width, height } = Dimensions.get('window')
+
 const { UIManager } = NativeModules;
 
 UIManager.setLayoutAnimationEnabledExperimental &&
-UIManager.setLayoutAnimationEnabledExperimental(true);
+    UIManager.setLayoutAnimationEnabledExperimental(true);
 
 class StartStopButton extends Component {
     constructor() {
         super();
         this.state = {
             currentButtonText: "rec",
-            buttonStatus: "recordingButton",
+            buttonStatus: "homeButton",
 
             currentButtonColor: "#E0ECF1",
             currentButtonWidth: 310,
@@ -30,10 +32,61 @@ class StartStopButton extends Component {
             currentButtonBorderWidth: 80
         };
     }
-
+    
     lat=[];
     lon=[];
     timestamp=[];
+
+    defineStyle() {
+        console.log('inside',this.props.currentScreenState)
+        if (this.props.currentScreenState === "Home") {
+            this.changeStyleToStart();
+        } else if (
+            this.props.currentScreenState === "CommunityView" ||
+            this.props.currentScreenState === "HistoryView"
+        ) {
+            this.changeStyleToInfo();
+        }
+        else{
+            this.changeStyleToStop();
+        }
+    }
+
+    changeStyleToStart() {
+        LayoutAnimation.spring();
+        this.setState({
+            currentButtonBorderRadius : this.startButtonProps.startButtonBorderRadius,
+            currentButtonHeight : this.startButtonProps.startButtonHeight,
+            currentButtonWidth : this.startButtonProps.startButtonWidth,
+            currentButtonBorderWidth : this.startButtonProps.startButtonBorderWidth,
+            currentButtonBorderColor: this.startButtonProps.startButtonBorderColor,
+            currentButtonText: "rec",
+        });
+    }
+
+    changeStyleToStop() {
+        LayoutAnimation.spring();
+        this.setState({
+            currentButtonBorderRadius : this.stopButtonProps.stopButtonBorderRadius,
+            currentButtonHeight : this.stopButtonProps.stopButtonHeight,
+            currentButtonWidth : this.stopButtonProps.stopButtonWidth,
+            currentButtonBorderWidth : this.stopButtonProps.stopButtonBorderWidth,
+            currentButtonBorderColor: this.stopButtonProps.stopButtonBorderColor,
+            buttonStatus : "trackingButton",
+            currentButtonText: "stop",
+        });
+    }
+
+    changeStyleToInfo() {
+        LayoutAnimation.spring();
+        this.setState({
+            currentButtonBorderRadius : this.infoButtonProps.infoButtonBorderRadius,
+            currentButtonHeight : this.infoButtonProps.infoButtonHeight,
+            currentButtonWidth : this.infoButtonProps.infoButtonWidth,
+            currentButtonBorderWidth : this.infoButtonProps.infoButtonBorderWidth,
+            currentButtonBorderColor: this.infoButtonProps.infoButtonBorderColor
+        });
+    }
 
     startButtonProps = {
         startButtonWidth: 310,
@@ -51,47 +104,34 @@ class StartStopButton extends Component {
         stopButtonBorderWidth: 33
     };
 
+    infoButtonProps = {
+        infoButtonWidth: width * 0.4,
+        infoButtonHeight: 60,
+        infoButtonBorderRadius: 15,
+        infoButtonBorderColor: "#79CDBE",
+        infoButtonBorderWidth: 10
+    }
+
     startTrackingFunction() {
         startTrack(this.lat, this.lon, this.timestamp);
-    
-        LayoutAnimation.spring();
-        this.setState({
-            buttonStatus: "stopButton",
-            currentButtonText: "stop",
-
-            currentButtonBorderRadius: this.stopButtonProps
-                .stopButtonBorderRadius,
-            currentButtonHeight: this.stopButtonProps.stopButtonHeight,
-            currentButtonWidth: this.stopButtonProps.stopButtonWidth,
-            currentButtonBorderWidth: this.stopButtonProps.stopButtonBorderWidth
-        });
-        console.log("Reached start tracking function!");
-        
+        this.changeStyleToStop()
         this.props.changeStateScreenState();
         this.props.changeDatabaseFalse();
     }
 
     stopTrackingFunction() {
         stopTrack();
-        
         this.props.updateValues(this.lat, this.lon, this.timestamp)
+        this.state.buttonStatus="homeButton"
 
-        LayoutAnimation.spring();
-        this.setState({
-            buttonStatus: "recordingButton",
-            currentButtonText: "rec",
-
-            currentButtonBorderRadius: this.startButtonProps
-                .startButtonBorderRadius,
-            currentButtonHeight: this.startButtonProps.startButtonHeight,
-            currentButtonWidth: this.startButtonProps.startButtonWidth,
-            currentButtonBorderWidth: this.startButtonProps
-                .startButtonBorderWidth
-        });
-
+        this.changeStyleToStart()
         this.props.changeStateScreenState();
         this.props.changeDatabaseTrue();
-    } 
+    }
+
+    componentDidMount(){
+        this.defineStyle();
+    }
 
     render() {
         return (
@@ -107,10 +147,9 @@ class StartStopButton extends Component {
                     alignItems: "center"
                 }}
                 onPress={() => {
-                    if (this.state.buttonStatus == "recordingButton") {
+                    if (this.state.buttonStatus == "homeButton") {
                         this.startTrackingFunction();
                     } else {
-
                         this.stopTrackingFunction();
                     }
                 }}

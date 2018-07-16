@@ -21,9 +21,12 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "native-base": "^2.7.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
+    "react-native-app-intro": "https://github.com/merryjs/react-native-app-intro",
     "react-native-background-timer": "^2.0.1",
+    "react-native-linear-gradient": "^2.4.0",
     "react-native-mauron85-background-geolocation": "^0.5.0-alpha.35",
     "react-native-stopwatch-timer": "0.0.20",
     "react-native-vector-icons": "^4.6.0",
