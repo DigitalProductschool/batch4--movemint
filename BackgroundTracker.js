@@ -271,6 +271,7 @@ class BackgroundTracker extends Component {
                     {renderIf(this.checkTwoStates("Home", "Tracking"))(
                     <StartStopButton
                         changeStateScreenState={this.changeStateScreenState}
+                        currentScreenState={this.state.screenState}
                         updateValues={this.updateValues}
                         changeDatabaseFalse={this.changeDatabaseFalse}
                         changeDatabaseTrue={this.changeDatabaseTrue}
@@ -289,10 +290,12 @@ class BackgroundTracker extends Component {
                         />
                         {renderIf(this.state.screenState !== "Home")(
                             <StartStopButton
-                                changeStateScreenState={
-                                    this.changeStateScreenState
-                                }
-                                currentScreenState={this.state.screenState}
+                            changeStateScreenState={this.changeStateScreenState}
+                            updateValues={this.updateValues}
+                            currentScreenState={this.state.screenState}
+                            changeDatabaseFalse={this.changeDatabaseFalse}
+                            changeDatabaseTrue={this.changeDatabaseTrue}
+                            style={{ position: "absolute", zIndex: -1 }}
                             />
                         )}
                         <HistoryButton
