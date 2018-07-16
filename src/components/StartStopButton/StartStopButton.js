@@ -34,6 +34,7 @@ class StartStopButton extends Component {
     }
 
     defineStyle() {
+        console.log('inside',this.props.currentScreenState)
         if (this.props.currentScreenState === "Home") {
             this.changeStyleToStart();
         } else if (

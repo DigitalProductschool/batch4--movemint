@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableHighlight } from "react-native";
+import {
+    View,
+    StyleSheet,
+    TouchableHighlight,
+    Text,
+    Alert
+} from "react-native";
 
 import GifComponent from "./src/components/GifComponent/GifComponent";
 import StartStopButton from "./src/components/StartStopButton/StartStopButton";
@@ -13,13 +19,18 @@ import HistoryView from "./src/components/HistoryView/HistoryView";
 
 import DatabaseManager from './index.android'
 
+import AppIntro from "react-native-app-intro";
+
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
+import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
+
 import renderIf from "./renderIf";
 
 class BackgroundTracker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            screenState: "Home",
+            screenState: "Intro",
             renderDatabase : false,
             geoStates : {
                 lon : [],
@@ -108,26 +119,128 @@ class BackgroundTracker extends Component {
             : false;
     }    
 
-    onSkipBtnHandle = (index) => {
-        Alert.alert('Skip');
+    onSkipBtnHandle = index => {
+        Alert.alert("Skip");
         console.log(index);
-    }
+        this.setState({
+            screenState: "Home"
+        });
+    };
     doneBtnHandle = () => {
-        Alert.alert('Done');
-    }
-    nextBtnHandle = (index) => {
-        Alert.alert('Next');
+        Alert.alert("Done");
+        this.setState({
+            screenState: "Home"
+        });
+    };
+    nextBtnHandle = index => {
+        Alert.alert("Next");
         console.log(index);
-    }
+    };
     onSlideChangeHandle = (index, total) => {
         console.log(index, total);
-    }
+    };
+
 
     render() {
         console.log("************************************")
         console.log("Current Screen State when rendered: " + this.state.screenState )
         return (
             <View style={{ flex: 1, flexWrap: "wrap" }}>
+            {renderIf(this.checkOneState("Intro"))(
+                    <AppIntro
+                        onNextBtnClick={this.nextBtnHandle}
+                        onDoneBtnClick={this.doneBtnHandle}
+                        onSkipBtnClick={this.onSkipBtnHandle}
+                        onSlideChange={this.onSlideChangeHandle}
+                    >
+                        <View
+                            style={[
+                                styles.slide,
+                                { backgroundColor: "#fa931d" }
+                            ]}
+                        >
+                            <View level={10} style={{ marginBottom: 20 }}>
+                                <FontAwesomeIcon
+                                    name="map-signs"
+                                    size={200}
+                                    color={"white"}
+                                    backgroundColor="#fa931d"
+                                />
+                            </View>
+                            <View level={0}>
+                                <Text style={styles.text}>
+                                    Durch deinen Beitrag als Radler verbessert
+                                    die Stadt die Radwege und Infrastruktur für
+                                    Radler.
+                                </Text>
+                            </View>
+                        </View>
+                        <View
+                            style={[
+                                styles.slide,
+                                { backgroundColor: "#a4b602" }
+                            ]}
+                        >
+                            <View level={0} style={{ marginBottom: 20 }}>
+                                <FontAwesomeIcon
+                                    name="map"
+                                    size={200}
+                                    color={"white"}
+                                    backgroundColor="#a4b602"
+                                />
+                            </View>
+                            <View level={8}>
+                                <Text style={styles.text}>
+                                    Wir benötigen keine persönlichen
+                                    Informationen - nur deine Radrouten.
+                                </Text>
+                            </View>
+                        </View>
+                        <View
+                            style={[
+                                styles.slide,
+                                { backgroundColor: "#fa931d" }
+                            ]}
+                        >
+                            <View level={5} style={{ marginBottom: 20 }}>
+                                <MaterialIcon
+                                    name="bike"
+                                    size={200}
+                                    color={"white"}
+                                    backgroundColor="#fa931d"
+                                />
+                            </View>
+                            <View level={12}>
+                                <Text style={styles.text}>
+                                    Zeichne deine Routen auf und werde Teil
+                                    unserer Radler-Community!
+                                </Text>
+                            </View>
+                        </View>
+                        <View
+                            style={[
+                                styles.slide,
+                                { backgroundColor: "#a4b602" }
+                            ]}
+                        >
+                            <View level={10} style={{ marginBottom: 20 }}>
+                                <MaterialIcon
+                                    name="cellphone"
+                                    size={200}
+                                    color={"white"}
+                                    backgroundColor="#a4b602"
+                                />
+                            </View>
+                            <View level={-5}>
+                                <Text style={styles.text}>
+                                    Probleme auf deiner Route werden durch
+                                    Sensoren in deinem Handy erkannt. Wir teilen
+                                    dir mit, wann sie gelöst werden.
+                                </Text>
+                            </View>
+                        </View>
+                    </AppIntro>
+                )}
                 <View style={styles.container}>
                     {renderIf(this.checkTwoStates("Home", "Tracking"))(
                         <KilometerDisplay
@@ -197,21 +310,34 @@ class BackgroundTracker extends Component {
 
 const styles = StyleSheet.create({
     container: {
-                flex: 7,
-                justifyContent: "flex-start",
-                alignItems: "center",
-                backgroundColor: "#424a63"
-                //position: "absolute"
-            },
-            bottomButtonView: {
-                flex: 1,
-                flexDirection: "row",
-                backgroundColor: "#424a63",
-                justifyContent: "space-between",
-                overflow: "visible",
-                zIndex: -1
-                //position: "absolute"
-            }
+        flex: 7,
+        justifyContent: "flex-start",
+        alignItems: "center",
+        backgroundColor: "#424a63"
+        //position: "absolute"
+    },
+    bottomButtonView: {
+        flex: 1,
+        flexDirection: "row",
+        backgroundColor: "#424a63",
+        justifyContent: "space-between",
+        overflow: "visible",
+        zIndex: -1
+        //position: "absolute"
+    },
+    slide: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#9DD6EB",
+        padding: 15
+    },
+    text: {
+        color: "#fff",
+        fontSize: 30,
+        fontWeight: "bold",
+        textAlign: "center"
+    }
 });
 
 export default BackgroundTracker;
