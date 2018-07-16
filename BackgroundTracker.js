@@ -107,6 +107,21 @@ class BackgroundTracker extends Component {
             : false;
     }    
 
+    onSkipBtnHandle = (index) => {
+                Alert.alert('Skip');
+                console.log(index);
+            }
+            doneBtnHandle = () => {
+                Alert.alert('Done');
+            }
+            nextBtnHandle = (index) => {
+                Alert.alert('Next');
+                console.log(index);
+            }
+            onSlideChangeHandle = (index, total) => {
+                console.log(index, total);
+            }
+
     render() {
         console.log("************************************")
         console.log("Current Screen State when rendered: " + this.state.screenState )

@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, Dimensions, FlatList } from "react-native";
-import { Container, Header, Content, List, ListItem } from "native-base";
+import {
+    Container,
+    Header,
+    Content,
+    List,
+    ListItem,
+    Thumbnail,
+    Left,
+    Body,
+    Right,
+    Button
+} from "native-base";
 
 const { width, height } = Dimensions.get("window");
 
@@ -13,6 +24,8 @@ class HistoryView extends Component {
         "Simon Mignolet",
         "Nathaniel Clyne",
         "Dejan Lovren",
+        "Mama Sakho",
+        "Emre Can",
         "Mama Sakho",
         "Emre Can"
     ];
@@ -31,7 +44,7 @@ class HistoryView extends Component {
                         My stats
                     </Text>
                 </View>
-                <View style={{ flex: 5 }}>
+                <View style={{ flex: 7 }}>
                     <View style={styles.infoRow}>
                         <View style={styles.infoItem}>
                             <Text style={styles.amountTextStyle}>154</Text>
@@ -61,12 +74,40 @@ class HistoryView extends Component {
                         </View>
                     </View>
                 </View>
-                <View>
+                <View style={styles.listView}>
                     <List
                         dataArray={this.items}
                         renderRow={item => (
-                            <ListItem>
-                                <Text>{item}</Text>
+                            <ListItem avatar>
+                                <Left>
+                                    <Text style={{color: "#79CDBE", fontSize: 14}}>#1</Text>
+                                </Left>
+                                <Body>
+                                    <Text style={{ color: "#79CDBE" }}>
+                                        June 27, 2018 at 17:29
+                                    </Text>
+                                    <View
+                                        style={{
+                                            flex: 1,
+                                            flexDirection: "row",
+                                            justifyContent: "space-between",
+                                            marginRight: 10
+                                        }}
+                                    >
+                                        <View>
+                                            <Text style={styles.listViewInfoHeader}>Entfernung</Text>
+                                            <Text style={styles.listViewAmount}>6.4km</Text>
+                                        </View>
+                                        <View>
+                                            <Text style={styles.listViewInfoHeader}>Zeit</Text>
+                                            <Text style={styles.listViewAmount}>15:24</Text>
+                                        </View>
+                                        <View>
+                                            <Text style={styles.listViewInfoHeader}>avg km/h</Text>
+                                            <Text style={styles.listViewAmount}>12.7</Text>
+                                        </View>
+                                    </View>
+                                </Body>
                             </ListItem>
                         )}
                     />
@@ -114,11 +155,20 @@ const styles = StyleSheet.create({
     header: {
         flex: 1,
         marginTop: 10,
-        marginBottom: 15
+        alignItems: "center"
     },
     listView: {
-        flex: 8,
-        backgroundColor: "red"
+        flex: 9,
+    },
+    listViewInfoHeader: {
+        color: "#A2ABB8",
+        fontSize: 14,
+        textAlign: "center"
+    },
+    listViewAmount: {
+        color: "#79CDBE",
+        fontSize: 20,
+        textAlign: "center"
     }
 });
 
