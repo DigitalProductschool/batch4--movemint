@@ -9,6 +9,7 @@ import CommunityButton from "./src/components/CommunityButton/CommunityButton";
 import HistoryButton from "./src/components/HistoryButton/HistoryButton";
 
 import CommunityView from "./src/components/CommunityView/CommunityView";
+import HistoryView from "./src/components/HistoryView/HistoryView";
 
 import DatabaseManager from './index.android'
 
@@ -31,6 +32,7 @@ class BackgroundTracker extends Component {
         this.changeDatabaseTrue = this.changeDatabaseTrue.bind(this);
         this.updateValues = this.updateValues.bind(this);
         this.changeStateScreenStateCommunity = this.changeStateScreenStateCommunity.bind(this);
+        this.changeStateScreenStateHistory = this.changeStateScreenStateHistory.bind(   this);
     }
     updateValues(lat, lon, timestamp) {
         this.setState({
@@ -65,14 +67,27 @@ class BackgroundTracker extends Component {
         });
     }
 
-    changeStateScreenStateCommunity() {
-                let futureState =
-                    this.state.screenState === "Home" ? "CommunityView" : "Home";
-                this.setState({
-                    screenState: futureState
-                });
-            }
+        changeStateScreenStateCommunity() {
+            let futureState =
+                this.state.screenState === "Home" ||
+                this.state.screenState == "HistoryView"
+                    ? "CommunityView"
+                    : "Home";
+            this.setState({
+                screenState: futureState
+            });
+        }
     
+        changeStateScreenStateHistory() {
+            let futureState =
+                this.state.screenState === "Home" ||
+                this.state.screenState == "CommunityView"
+                    ? "HistoryView"
+                    : "Home";
+            this.setState({
+                screenState: futureState
+            });
+        }
     checkOneState(firstState) {
                 return this.state.screenState === firstState ? true : false;
             }
@@ -84,7 +99,16 @@ class BackgroundTracker extends Component {
             : false;
         }
 
+    checkThreeStates(firstState, secondState, thirdState) {
+        return this.state.screenState === firstState ||
+            this.state.screenState === secondState ||
+            this.state.screenState === thirdState
+            ? true
+            : false;
+    }    
+
     render() {
+        console.log("************************************")
         console.log("Current Screen State when rendered: " + this.state.screenState )
         return (
             <View style={{ flex: 1, flexWrap: "wrap" }}>
@@ -101,6 +125,10 @@ class BackgroundTracker extends Component {
                             style={{ flex: 1 }}
                         />
                     )}
+                    
+                    {renderIf(this.checkOneState("HistoryView"))(
+                        <HistoryView />
+                    )}
 
                     {renderIf(this.checkOneState("Tracking"))(<GifComponent />)}
 
@@ -111,6 +139,7 @@ class BackgroundTracker extends Component {
                     />
 
                     )}
+                    {renderIf(this.checkTwoStates("Home", "Tracking"))(
                     <StartStopButton
                         changeStateScreenState={this.changeStateScreenState}
                         updateValues={this.updateValues}
@@ -118,17 +147,31 @@ class BackgroundTracker extends Component {
                         changeDatabaseTrue={this.changeDatabaseTrue}
                         style={{ position: "absolute", zIndex: -1 }}
                     />
-                    
+                    )}
                 </View>
-                {renderIf(this.checkTwoStates("Home", "CommunityView"))(
+                {renderIf(this.checkThreeStates("Home", "CommunityView", "HistoryView"))(
                     <View style={styles.bottomButtonView}>
                         <CommunityButton
                             changeStateScreenStateCommunity={
                                 this.changeStateScreenStateCommunity
                             }
                             style={{ paddingTop: 50 }}
+                            currentScreenState={this.state.screenState}
                         />
-                        <HistoryButton />
+                        {renderIf(this.state.screenState !== "Home")(
+                            <StartStopButton
+                                changeStateScreenState={
+                                    this.changeStateScreenState
+                                }
+                                currentScreenState={this.state.screenState}
+                            />
+                        )}
+                        <HistoryButton
+                            changeStateScreenStateHistory={
+                                this.changeStateScreenStateHistory
+                            }
+                            currentScreenState={this.state.screenState}
+                        />
                     </View>
                 )}
             </View>
