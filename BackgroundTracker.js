@@ -181,21 +181,21 @@ class BackgroundTracker extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 7,
-        justifyContent: "flex-start",
-        alignItems: "center",
-        backgroundColor: "#424a63"
-        //position: "absolute"
-    },
-    bottomButtonView: {
-        flex: 1,
-        flexDirection: "row",
-        backgroundColor: "#424a63",
-        justifyContent: "space-between",
-        overflow: "visible",
-        zIndex: -1
-        //position: "absolute"
-    }
+                flex: 7,
+                justifyContent: "flex-start",
+                alignItems: "center",
+                backgroundColor: "#424a63"
+                //position: "absolute"
+            },
+            bottomButtonView: {
+                flex: 1,
+                flexDirection: "row",
+                backgroundColor: "#424a63",
+                justifyContent: "space-between",
+                overflow: "visible",
+                zIndex: -1
+                //position: "absolute"
+            }
 });
 
 export default BackgroundTracker;

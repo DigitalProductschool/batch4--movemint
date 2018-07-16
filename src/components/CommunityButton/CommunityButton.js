@@ -10,12 +10,21 @@ class CommunityButton extends Component {
         };
     }
 
-    onButtonPress() {
-        let futureColor = this.state.buttonColor === "#a2abb8" ? "#79CDBE" : "#a2abb8";
+    changeColorAndState() {
+        let futureColor = this.props.currentScreenState === "CommunityView" ? "#a2abb8" : "#79CDBE"
         this.setState({
             buttonColor: futureColor
         });
         this.props.changeStateScreenStateCommunity();
+    }
+
+    componentDidUpdate(){
+        console.log("Entered Component Did Update Community Button")
+        if(this.props.currentScreenState !== "CommunityView" && this.state.buttonColor == "#79CDBE"){
+            this.setState({
+                buttonColor: "#a2abb8"
+            });
+        }
     }
 
     render() {
@@ -24,7 +33,7 @@ class CommunityButton extends Component {
                 name="group"
                 size={45}
                 color= {this.state.buttonColor}
-                onPress={() => this.onButtonPress()}
+                onPress={() => this.changeColorAndState()}
                 backgroundColor="#424a63"
                 iconStyle={{margin: 0}}
             />
