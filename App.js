@@ -154,13 +154,6 @@ class App extends Component {
           {renderIf(this.checkOneState("HistoryView"))(<HistoryView />)}
 
           {renderIf(this.checkOneState("Tracking"))(<GifComponent />)}
-
-          {renderIf(this.state.renderDatabase)(
-            <DatabaseManager
-              geoStates={this.state.geoStates}
-              screenState={this.state.screenState}
-            />
-          )}
           {renderIf(this.checkTwoStates("Home", "Tracking"))(
             <StartStopButton
               changeStateScreenState={this.changeStateScreenState}

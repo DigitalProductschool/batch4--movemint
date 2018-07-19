@@ -19,6 +19,7 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "faker": "^4.1.0",
     "native-base": "^2.7.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
@@ -28,7 +29,7 @@
     "react-native-mauron85-background-geolocation": "^0.5.0-alpha.35",
     "react-native-stopwatch-timer": "0.0.20",
     "react-native-vector-icons": "^4.6.0",
-    "realm": "^2.12.0",
+    "realm": "^2.13.0",
     "render-if": "^0.1.1",
     "toggle-switch-react-native": "^1.0.0"
   }
