@@ -35,9 +35,9 @@ export const startTrack = (lat, lon, timestamp) => {
     // you need to create background task
   
     console.log(location);
-    lon.push(location.longitude.toString())
-    lat.push(location.latitude.toString())
-    timestamp.push(location.time.toString())
+    lon.push(location.longitude.toString());
+    lat.push(location.latitude.toString());
+    timestamp.push(location.time.toString());
    
     BackgroundGeolocation.startTask(taskKey => {
       // execute long running task

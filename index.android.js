@@ -37,10 +37,10 @@ class Database extends Component {
   }
 
   componentDidMount() {
-    console.log('Component Did Mount')
+    console.log('Component Did Mount');
     if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
     
-    console.log(this.props.screenState)
+    console.log(this.props.screenState);
     if(this.props.screenState=="Home")
         this.gottheLocation();
   }

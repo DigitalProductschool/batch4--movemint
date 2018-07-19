@@ -10,7 +10,7 @@ import {
 import { startTrack } from "../../utilities/startTrack";
 import { stopTrack } from "../../utilities/stopTrack";
 
-const { width, height } = Dimensions.get('window')
+const { width, height } = Dimensions.get('window');
 
 const { UIManager } = NativeModules;
 
@@ -38,7 +38,7 @@ class StartStopButton extends Component {
     timestamp=[];
 
     defineStyle() {
-        console.log('inside',this.props.currentScreenState)
+        console.log('inside',this.props.currentScreenState);
         if (this.props.currentScreenState === "Home") {
             this.changeStyleToStart();
         } else if (
@@ -110,21 +110,21 @@ class StartStopButton extends Component {
         infoButtonBorderRadius: 15,
         infoButtonBorderColor: "#79CDBE",
         infoButtonBorderWidth: 10
-    }
+    };
 
     startTrackingFunction() {
         startTrack(this.lat, this.lon, this.timestamp);
-        this.changeStyleToStop()
+        this.changeStyleToStop();
         this.props.changeStateScreenState();
         this.props.changeDatabaseFalse();
     }
 
     stopTrackingFunction() {
         stopTrack();
-        this.props.updateValues(this.lat, this.lon, this.timestamp)
-        this.state.buttonStatus="homeButton"
+        this.props.updateValues(this.lat, this.lon, this.timestamp);
+        this.state.buttonStatus="homeButton";
 
-        this.changeStyleToStart()
+        this.changeStyleToStart();
         this.props.changeStateScreenState();
         this.props.changeDatabaseTrue();
     }
