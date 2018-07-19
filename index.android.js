@@ -11,7 +11,7 @@ class Database extends Component {
     realm.write(() => {
       realm.create('Users',
         {
-          userName: 'Parth',
+          userName: 'Max',
           userID: 1,
           totalDistance: 10,
           totalTrips: 1,
@@ -23,10 +23,7 @@ class Database extends Component {
           }],
         });
     });
-    let allusers = realm.objects('Users');
-    console.log('users');
-    console.log(JSON.stringify(allusers))
-  }
+}
 
   deleteAllUsers() {
     realm.write(() => {
@@ -38,21 +35,13 @@ class Database extends Component {
 
   componentDidMount() {
     console.log('Component Did Mount');
-    if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
+    if (realm.objects('Users').length > 5) { this.deleteAllUsers(); }
     
     console.log(this.props.screenState);
     if(this.props.screenState=="Home")
         this.gottheLocation();
   }
-  
-  // componentDidUpdate() {
-  //   console.log('Component Did Update')
-  //   if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
 
-  //   console.log(this.props.screenState)
-  //   if(this.props.screenState=="Home")
-  //       this.gottheLocation();
-  // }
   render() {
     return (
       <View>

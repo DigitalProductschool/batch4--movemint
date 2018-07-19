@@ -1,9 +1,12 @@
 import Realm from 'realm';
 
+var username = 'parth';
+var password = 'parth';
+var server = 'https://movemintserver.de1a.cloud.realm.io/';
+
 class Tripsdb extends Realm.Object { }
 Tripsdb.schema = {
     name: 'Trips',
-    //primaryKey: 'tripID',
     properties: {
         tripID: { type: 'int' },
         lat: { type: 'list', objectType: 'string' },
@@ -15,7 +18,6 @@ Tripsdb.schema = {
 class Usersdb extends Realm.Object { }
 Usersdb.schema = {
     name: 'Users',
-    //primaryKey: 'userID',
     properties: {
         userName: { type: 'string' },
         userID: { type: 'int' },
@@ -24,5 +26,9 @@ Usersdb.schema = {
         trips: { type: 'list', objectType: 'Trips' }
     }
 };
-
-export default new Realm({ schema: [Tripsdb, Usersdb] });
+Realm.Sync.User.login(server, username, password, (error, user) => {
+    if (!error) {
+      console.log(user)
+    }
+})
+export default new Realm({sync:{user: Realm.Sync.User.current, url: 'realms://movemintserver.de1a.cloud.realm.io/~/locationdata',}, schema: [Tripsdb, Usersdb] });
