@@ -4,7 +4,6 @@ var username = 'parth';
 var password = 'parth';
 var server = 'https://movemintserver.de1a.cloud.realm.io/';
 
-var realm1;
 class Tripsdb extends Realm.Object { }
 Tripsdb.schema = {
     name: 'Trips',
