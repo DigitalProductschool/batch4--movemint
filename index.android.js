@@ -7,8 +7,8 @@ var username = 'parth';
 var password = 'parth';
 var server = 'https://movemintserver.de1a.cloud.realm.io/';
 
-class Tripsdb extends Realm.Object { }
-Tripsdb.schema = {
+//class Tripsdb extends Realm.Object { }
+const Tripsdb = {
     name: 'Trips',
     //primaryKey: 'tripID',
     properties: {
@@ -19,8 +19,8 @@ Tripsdb.schema = {
     }
 };
 
-class Usersdb extends Realm.Object { }
-Usersdb.schema = {
+//class Usersdb extends Realm.Object { }
+const Usersdb = {
     name: 'Users',
     //primaryKey: 'userID',
     properties: {
@@ -40,17 +40,18 @@ class Database extends Component {
   gottheLocation() {
     Realm.Sync.User.login(server, username, password, (error, user) => {
       if (!error) {
+        console.log(user)
         Realm.open({
           sync: {
             user: user,
-            url: 'https://movemintserver.de1a.cloud.realm.io/~/locationdata',
+            url: 'realms://movemintserver.de1a.cloud.realm.io/~/locationdata',
           },
           schema: [Tripsdb, Usersdb]
         }).then(realm => {
           realm.write(() => {
             realm.create('Users',
               {
-                userName: user,
+                userName: 'Max',
                 userID: 1,
                 totalDistance: 10,
                 totalTrips: 1,
@@ -62,9 +63,6 @@ class Database extends Component {
                 }],
               });
           });
-          let allusers = realm.objects('Users');
-          console.log('users');
-          console.log(JSON.stringify(allusers))
         });
       }
     });
@@ -80,7 +78,7 @@ class Database extends Component {
 
   componentDidMount() {
     console.log('Component Did Mount');
-    if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
+    //if (realm.objects('Users').length > 6) { this.deleteAllUsers(); }
     
     console.log(this.props.screenState);
     if(this.props.screenState=="Home")
