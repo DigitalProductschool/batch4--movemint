@@ -11,7 +11,7 @@ class HistoryButton extends Component {
     }
 
     changeColorAndState() {
-        let futureColor = this.props.currentScreenState === "HistoryView" ? "#a2abb8" : "#79CDBE"
+        let futureColor = this.props.currentScreenState === "HistoryView" ? "#a2abb8" : "#79CDBE";
         this.setState({
             buttonColor: futureColor
         });
@@ -19,9 +19,9 @@ class HistoryButton extends Component {
     }
 
     componentDidUpdate(){
-        console.log("Entered Component Did Update History Button")
-        console.log("State inside History Button: " + this.props.currentScreenState)
-        console.log("Current Button Color: " + this.state.buttonColor)
+        console.log("Entered Component Did Update History Button");
+        console.log("State inside History Button: " + this.props.currentScreenState);
+        console.log("Current Button Color: " + this.state.buttonColor);
         if(this.props.currentScreenState !== "HistoryView" && this.state.buttonColor == "#79CDBE"){
             this.setState({
                 buttonColor: "#a2abb8"

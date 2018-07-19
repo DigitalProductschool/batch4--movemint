@@ -11,7 +11,7 @@ class CommunityButton extends Component {
     }
 
     changeColorAndState() {
-        let futureColor = this.props.currentScreenState === "CommunityView" ? "#a2abb8" : "#79CDBE"
+        let futureColor = this.props.currentScreenState === "CommunityView" ? "#a2abb8" : "#79CDBE";
         this.setState({
             buttonColor: futureColor
         });
@@ -19,7 +19,7 @@ class CommunityButton extends Component {
     }
 
     componentDidUpdate(){
-        console.log("Entered Component Did Update Community Button")
+        console.log("Entered Component Did Update Community Button");
         if(this.props.currentScreenState !== "CommunityView" && this.state.buttonColor == "#79CDBE"){
             this.setState({
                 buttonColor: "#a2abb8"
