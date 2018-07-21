@@ -36,9 +36,11 @@ class StartStopButton extends Component {
       lonArr: [],
       timeArr: []
     };
+    this.updateGeoData=this.updateGeoData.bind(this)
   }
 
   updateGeoData(lat, lon, time){
+    console.log(this.state)
     this.state.latArr.push(lat);
     this.state.lonArr.push(lon);
     this.state.timeArr.push(time)
@@ -130,7 +132,7 @@ class StartStopButton extends Component {
   }
 
   stopTrackingFunction() {
-    stopTrack();
+    stopTrack(this.state.latArr, this.state.lonArr, this.state.timeArr);
     this.props.updateValues(this.lat, this.lon, this.timestamp);
     this.state.buttonStatus = "homeButton";
 
