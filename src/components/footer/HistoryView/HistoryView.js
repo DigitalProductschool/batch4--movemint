@@ -12,6 +12,7 @@ import {
     Right,
     Button
 } from "native-base";
+import realm from '../../../utilities/realm'
 
 const { width, height } = Dimensions.get("window");
 
@@ -19,6 +20,9 @@ class HistoryView extends Component {
     renderItem({ item, index }) {
         return <Text style={style.row}>{item}</Text>;
     }
+    
+    trips = realm.objects('Trips');
+    general = realm.objects('General');
 
     items = [
         "Simon Mignolet",
@@ -47,13 +51,13 @@ class HistoryView extends Component {
                 <View style={{ flex: 7 }}>
                     <View style={styles.infoRow}>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>154</Text>
+                            <Text style={styles.amountTextStyle}>{this.general[0].totalDistance.toFixed(2)}</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 km total
                             </Text>
                         </View>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>13</Text>
+                            <Text style={styles.amountTextStyle}>{this.trips.length}</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 trips
                             </Text>
@@ -61,13 +65,13 @@ class HistoryView extends Component {
                     </View>
                     <View style={styles.infoRow}>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>14.2</Text>
+                            <Text style={styles.amountTextStyle}>{this.general[0].avgSpeed.toFixed(2)}</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 avg km/h
                             </Text>
                         </View>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>12.8</Text>
+                            <Text style={styles.amountTextStyle}>1</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 kg CO2 saved
                             </Text>
