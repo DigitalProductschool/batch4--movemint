@@ -31,4 +31,4 @@ Realm.Sync.User.login(server, username, password, (error, user) => {
       console.log(user)
     }
 })
-export default new Realm({sync:{user: Realm.Sync.User.current, url: 'realms://movemintserver.de1a.cloud.realm.io/~/locationdata',}, schema: [Tripsdb, Usersdb] });
+export default new Realm({sync:{user: Realm.Sync.User.current, url: 'realms://movemintserver.de1a.cloud.realm.io/locdata',}, schema: [Tripsdb, Usersdb] });
