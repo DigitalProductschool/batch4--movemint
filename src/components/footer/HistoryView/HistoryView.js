@@ -24,25 +24,6 @@ class HistoryView extends Component {
     trips = realm.objects('Trips');
     general = realm.objects('General');
 
-    // getTotalDistance = (trips) => {
-    //     var distance = 0;
-    //     for(let trip of trips)
-    //     {
-    //         distance+=trip.distance;
-    //     }
-    //     return distance;
-    // }
-
-    // getAvgSpeed = (trips) => {
-    //     var dist = this.getTotalDistance(trips);
-    //     var time=0;
-    //     for(let trip of trips)
-    //     {
-    //         time+=trip.timetaken;
-    //     }
-    //     return (dist*1.0)/(time/60);
-    // }
-
     items = [
         "Simon Mignolet",
         "Nathaniel Clyne",
@@ -70,7 +51,7 @@ class HistoryView extends Component {
                 <View style={{ flex: 7 }}>
                     <View style={styles.infoRow}>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>{this.general.totalDistance.toFixed(2)}</Text>
+                            <Text style={styles.amountTextStyle}>{this.general[0].totalDistance.toFixed(2)}</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 km total
                             </Text>
@@ -84,7 +65,7 @@ class HistoryView extends Component {
                     </View>
                     <View style={styles.infoRow}>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>{this.general.avgSpeed.toFixed(2)}</Text>
+                            <Text style={styles.amountTextStyle}>{this.general[0].avgSpeed.toFixed(2)}</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 avg km/h
                             </Text>
