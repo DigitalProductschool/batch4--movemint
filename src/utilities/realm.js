@@ -15,21 +15,21 @@ Tripsdb.schema = {
     }
 };
 
-class Usersdb extends Realm.Object { }
-Usersdb.schema = {
-    name: 'Users',
-    properties: {
-        userName: { type: 'string' },
-        userID: { type: 'int' },
-        totalDistance: { type: 'int' },
-        totalTrips: { type: 'int' },
-        trips: { type: 'list', objectType: 'Trips' }
-    }
-};
+// class Usersdb extends Realm.Object { }
+// Usersdb.schema = {
+//     name: 'Users',
+//     properties: {
+//         userName: { type: 'string' },
+//         userID: { type: 'int' },
+//         totalDistance: { type: 'int' },
+//         totalTrips: { type: 'int' },
+//         trips: { type: 'list', objectType: 'Trips' }
+//     }
+// };
 Realm.Sync.User.login(server, username, password, (error, user) => {
     if (!error) {
       console.log(user)
       console.log(error)
     }
 })
-export default new Realm({sync:{user: Realm.Sync.User.current, url: 'realms://movemintserver.de1a.cloud.realm.io/locdata',}, schema: [Tripsdb, Usersdb] });
+export default new Realm({sync:{user: Realm.Sync.User.current, url: 'realms://movemintserver.de1a.cloud.realm.io/locdata',}, schema: [Tripsdb] });

@@ -8,35 +8,22 @@ class Database extends Component {
   }
 
   gottheLocation() {
+    const totaltrips = realm.objects('Trips').length
+    
     realm.write(() => {
-      realm.create('Users',
-        {
-          userName: 'Max',
-          userID: 1,
-          totalDistance: 10,
-          totalTrips: 1,
-          trips: [{
-            tripID: 2,
+      realm.create('Trips',
+      {
+            tripID: totaltrips + 1,
             lat: this.props.geoStates.lat,
             lon: this.props.geoStates.lon,
             timestamp: this.props.geoStates.timestamp,
-          }],
-        });
+      }   
+        );
     });
 }
 
-  deleteAllUsers() {
-    realm.write(() => {
-      let allusers = realm.objects('Users');
-      console.log('Limit reached. Deleting all users.');
-      realm.delete(allusers);
-    })
-  }
-
   componentDidMount() {
     console.log('Component Did Mount');
-    if (realm.objects('Users').length > 5) { this.deleteAllUsers(); }
-    
     console.log(this.props.screenState);
     if(this.props.screenState=="Home")
         this.gottheLocation();
