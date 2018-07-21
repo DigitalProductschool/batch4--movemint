@@ -6,6 +6,7 @@ import {
     NativeModules,
     LayoutAnimation
 } from "react-native";
+import realm from '../../utilities/realm'
 
 const { UIManager } = NativeModules;
 
@@ -17,7 +18,7 @@ class KilometerDisplay extends Component {
         super();
         this.state = {
             totalKilometers: 0,
-            currentTripKilometers: "0.0",
+            currentTripKilometers: realm.objects('General')[0].totalDistance.toFixed(2),
             currentFontSize: 80,
             kmTotalFontSize: 26,
             currentKilometerDisplayState: "Home",
