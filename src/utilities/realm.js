@@ -11,7 +11,9 @@ Tripsdb.schema = {
     tripID: { type: "int" },
     lat: { type: "list", objectType: "string" },
     lon: { type: "list", objectType: "string" },
-    timestamp: { type: "list", objectType: "string" }
+    timestamp: { type: "list", objectType: "string" },
+    distance: {type: "float"},
+    timetaken: {type: "float"}
   }
 };
 
