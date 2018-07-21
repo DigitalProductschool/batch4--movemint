@@ -43,7 +43,7 @@ class StartStopButton extends Component {
     this.state.latArr.push(lat);
     this.state.lonArr.push(lon);
     this.state.timeArr.push(time),
-      console.log("Lat Array: " + this.state.latArr);
+    console.log("Lat Array: " + this.state.latArr);
     console.log("Lon Array: " + this.state.lonArr);
     console.log("Time Array: " + this.state.timeArr);
   }

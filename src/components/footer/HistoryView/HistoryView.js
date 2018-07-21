@@ -12,6 +12,7 @@ import {
     Right,
     Button
 } from "native-base";
+import realm from '../../../utilities/realm'
 
 const { width, height } = Dimensions.get("window");
 
@@ -19,6 +20,28 @@ class HistoryView extends Component {
     renderItem({ item, index }) {
         return <Text style={style.row}>{item}</Text>;
     }
+    
+    trips = realm.objects('Trips');
+    general = realm.objects('General');
+
+    // getTotalDistance = (trips) => {
+    //     var distance = 0;
+    //     for(let trip of trips)
+    //     {
+    //         distance+=trip.distance;
+    //     }
+    //     return distance;
+    // }
+
+    // getAvgSpeed = (trips) => {
+    //     var dist = this.getTotalDistance(trips);
+    //     var time=0;
+    //     for(let trip of trips)
+    //     {
+    //         time+=trip.timetaken;
+    //     }
+    //     return (dist*1.0)/(time/60);
+    // }
 
     items = [
         "Simon Mignolet",
@@ -47,13 +70,13 @@ class HistoryView extends Component {
                 <View style={{ flex: 7 }}>
                     <View style={styles.infoRow}>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>154</Text>
+                            <Text style={styles.amountTextStyle}>{this.general.totalDistance.toFixed(2)}</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 km total
                             </Text>
                         </View>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>13</Text>
+                            <Text style={styles.amountTextStyle}>{this.trips.length}</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 trips
                             </Text>
@@ -61,13 +84,13 @@ class HistoryView extends Component {
                     </View>
                     <View style={styles.infoRow}>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>14.2</Text>
+                            <Text style={styles.amountTextStyle}>{this.general.avgSpeed.toFixed(2)}</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 avg km/h
                             </Text>
                         </View>
                         <View style={styles.infoItem}>
-                            <Text style={styles.amountTextStyle}>12.8</Text>
+                            <Text style={styles.amountTextStyle}>1</Text>
                             <Text style={styles.descriptionTextStyle}>
                                 kg CO2 saved
                             </Text>

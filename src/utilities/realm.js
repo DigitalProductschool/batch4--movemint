@@ -13,7 +13,19 @@ Tripsdb.schema = {
     lon: { type: "list", objectType: "string" },
     timestamp: { type: "list", objectType: "string" },
     distance: {type: "float"},
-    timetaken: {type: "float"}
+    timetaken: {type: "float"},
+    avgSpeed: {type: "float"}
+  }
+};
+
+class Generaldb extends Realm.Object {}
+Generaldb.schema = {
+  name: "General",
+  primaryKey: 'fixed',
+  properties: {
+    fixed: {type: "int"},
+    totalDistance: {type: "float"},
+    avgSpeed: {type: "float"}
   }
 };
 
@@ -28,5 +40,5 @@ export default new Realm({
     user: Realm.Sync.User.all["d69bbc4d8ae909d69e418b3afad69f68"],
     url: "realms://movemintserver.de1a.cloud.realm.io/locdata"
   },
-  schema: [Tripsdb]
+  schema: [Tripsdb, Generaldb]
 });
