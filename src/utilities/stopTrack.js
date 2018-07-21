@@ -7,9 +7,7 @@ function pushToDatabase(lat, lon, time) {
   const totaltrips = realm.objects("Trips").length;
   const totalDistance = realm.objects("General")[0].totalDistance;
   const avgSpeed = realm.objects("General")[0].avgSpeed;
-  console.log(realm.objects('General'))
-  console.log('db',avgSpeed)
-  
+
   realm.write(() => {
     const newTrip = realm.create("Trips", {
       tripID: totaltrips + 1,
@@ -20,15 +18,11 @@ function pushToDatabase(lat, lon, time) {
       timetaken: 0,
       avgSpeed:0
     });
+    
     newTrip.distance += calcDistance(newTrip);
     newTrip.timetaken += calcTimeTaken(newTrip);
     newTrip.avgSpeed += (newTrip.distance/(newTrip.timetaken/60))
-    
-    // const update = realm.create("General", {
-    //   fixed: 1,
-    //   totalDistance: 0,
-    //   avgSpeed: 0,
-    // },true)
+
     update = realm.objects("General")[0];
     update.totalDistance += newTrip.distance;
     update.avgSpeed += newTrip.avgSpeed;
