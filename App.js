@@ -7,20 +7,10 @@ import KilometerDisplay from "./src/components/KilometerDisplay/KilometerDisplay
 
 import CommunityButton from "./src/components/footer/CommunityButton/CommunityButton";
 import HistoryButton from "./src/components/footer/HistoryButton/HistoryButton";
-
-import FooterCombined from "./src/components/footer/FooterCombined/FooterCombined";
-
 import CommunityView from "./src/components/footer/CommunityView/CommunityView";
 import HistoryView from "./src/components/footer/HistoryView/HistoryView";
 
 import IntroSlider from "./src/components/IntroSlider/IntroSlider";
-
-import DatabaseManager from "./index.android";
-
-import AppIntro from "react-native-app-intro";
-
-import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
-import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import renderIf from "./renderIf";
 
@@ -34,7 +24,10 @@ class App extends Component {
         lon: [],
         lat: [],
         timestamp: []
-      }
+      },
+      lonArr: [],
+      latArr: [],
+      timeArr: []
     };
 
     this.changeDatabaseFalse = this.changeDatabaseFalse.bind(this);

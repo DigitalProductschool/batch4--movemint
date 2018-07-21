@@ -2,7 +2,6 @@ import BackgroundGeolocation from "react-native-mauron85-background-geolocation"
 
 const Realm = require('realm')
 
-const totalTickers = 100
 const USERNAME = "Robinbux"
 const PASSWORD = "1234"
 const SERVER = "movemintserver.de1a.cloud.realm.io"
