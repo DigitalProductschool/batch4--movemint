@@ -1,7 +1,7 @@
 import BackgroundGeolocation from "react-native-mauron85-background-geolocation";
 import StartStopButton from "../components/StartStopButton/StartStopButton";
 
-export const startTrack = (lat, lon, timestamp) => {
+export const startTrack = (lat, lon, timestamp, updateGeoStates) => {
   //Alert.alert("Tracking Started!");
 
   BackgroundGeolocation.configure({
@@ -35,6 +35,7 @@ export const startTrack = (lat, lon, timestamp) => {
     // you need to create background task
   
     console.log(location);
+    updateGeoStates(location.latitude.toString(), location.longitude.toString(), location.time.toString())
     lon.push(location.longitude.toString());
     lat.push(location.latitude.toString());
     timestamp.push(location.time.toString());
