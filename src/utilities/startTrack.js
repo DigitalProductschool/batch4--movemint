@@ -57,7 +57,7 @@ function pushToDatabase(location) {
   console.log("Push To Databased finished!")
 }
 
-export const startTrack = (lat, lon, timestamp) => {
+export const startTrack = (lat, lon, timestamp, updateGeoData) => {
   //Alert.alert("Tracking Started!");
 
   BackgroundGeolocation.configure({
@@ -94,6 +94,7 @@ export const startTrack = (lat, lon, timestamp) => {
     console.log(location);
     console.log("That was it!")
     console.log("PUSH TO DATABASE: ")
+    updateGeoData(location.latitude, location.longitude, location.time)
     pushToDatabase(location);
     lon.push(location.longitude.toString());
     lat.push(location.latitude.toString());

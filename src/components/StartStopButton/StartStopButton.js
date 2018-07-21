@@ -123,7 +123,7 @@ class StartStopButton extends Component {
   };
 
   startTrackingFunction() {
-    startTrack(this.lat, this.lon, this.timestamp);
+    startTrack(this.lat, this.lon, this.timestamp, this.updateGeoData);
     this.changeStyleToStop();
     this.props.changeStateScreenState();
     this.props.changeDatabaseFalse();
