@@ -20,6 +20,8 @@ import AppIntro from "react-native-app-intro";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
+import TimerComponent from "./src/components/TimerComponent/TimerComponent"
+
 import renderIf from "./renderIf";
 
 class App extends Component {
@@ -138,8 +140,12 @@ class App extends Component {
           <IntroSlider changeStateToHome={this.changeStateToHome} />
         )}
         <View style={styles.container}>
-          {renderIf(this.checkTwoStates("Home", "Tracking"))(
+          {renderIf(this.checkOneState("Home"))(
             <KilometerDisplay screenState={this.state.screenState} />
+          )}
+
+          {renderIf(this.checkOneState("Tracking"))(
+            <TimerComponent/>
           )}
 
           {renderIf(this.checkOneState("CommunityView"))(

@@ -3,6 +3,9 @@ package com.movemint;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.BV.LinearGradient.LinearGradientPackage;
+import com.ocetnik.timer.BackgroundTimerPackage;
+import com.jamesisaac.rnbackgroundtask.BackgroundTaskPackage;
 import com.marianhello.bgloc.react.BackgroundGeolocationPackage;
 import io.realm.react.RealmReactPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +28,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new LinearGradientPackage(),
+            new BackgroundTimerPackage(),
+            new BackgroundTaskPackage(),
             new BackgroundGeolocationPackage(),
             new RealmReactPackage()
       );
@@ -45,5 +51,6 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
+    BackgroundTaskPackage.useContext(this);
   }
 }

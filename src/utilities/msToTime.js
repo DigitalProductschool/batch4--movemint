@@ -1,4 +1,5 @@
 export function msToTime(duration) {
+    duration *= 1000;
     seconds = parseInt((duration / 1000) % 60),
         minutes = parseInt((duration / (1000 * 60)) % 60),
         hours = parseInt((duration / (1000 * 60 * 60)) % 24);
