@@ -17,7 +17,7 @@ The user does not have to change their behaviour in any way, they just need to s
 <a href="https://imgbb.com/"><img src="https://image.ibb.co/jhq3By/Bildschirmfoto_2018_07_23_um_11_29_25.png" alt="Bildschirmfoto_2018_07_23_um_11_29_25" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://image.ibb.co/fsyOBy/Bildschirmfoto_2018_07_23_um_11_31_49.png" alt="Bildschirmfoto_2018_07_23_um_11_31_49" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://image.ibb.co/hoU8dd/Bildschirmfoto_2018_07_23_um_11_29_55.png" alt="Bildschirmfoto_2018_07_23_um_11_29_55" border="0"></a>
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/kniZJd/Bildschirmfoto_2018_07_23_um_11_30_14.png" alt="Bildschirmfoto_2018_07_23_um_11_30_14" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Kobayashi-Issa/poems'>Kobayashi Issa poems</a><br />
+<a href="https://imgbb.com/"><img src="https://image.ibb.co/kniZJd/Bildschirmfoto_2018_07_23_um_11_30_14.png" alt="Bildschirmfoto_2018_07_23_um_11_30_14" border="0"></a>
 
 ## How we built it
 
