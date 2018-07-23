@@ -39,7 +39,7 @@ class TimerComponent extends Component {
 
   render() {
     return (
-      <View style={{ marginTop: 10, opacity: 0.75 }}>
+      <View style={{ marginTop: 20, marginBottom: 40, opacity: 0.75 }}>
         <Text style={styles.styleTracking}>{msToTime(this.state.seconds)}</Text>
       </View>
     );

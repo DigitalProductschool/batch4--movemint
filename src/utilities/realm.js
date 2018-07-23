@@ -1,7 +1,7 @@
 import Realm from "realm";
 
-var username = "parth";
-var password = "parth";
+var username = "Robinbux";
+var password = "1234";
 var server = "https://movemintserver.de1a.cloud.realm.io/";
 
 class Tripsdb extends Realm.Object {}
@@ -25,7 +25,7 @@ Realm.Sync.User.login(server, username, password, (error, user) => {
 });
 export default new Realm({
   sync: {
-    user: Realm.Sync.User.all["d69bbc4d8ae909d69e418b3afad69f68"],
+    user: Realm.Sync.User.all["9cc1137cc9f3a3c3ca60162537ba8df9"],
     url: "realms://movemintserver.de1a.cloud.realm.io/locdata"
   },
   schema: [Tripsdb]
